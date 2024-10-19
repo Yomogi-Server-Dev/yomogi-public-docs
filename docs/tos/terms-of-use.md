@@ -2,9 +2,9 @@
 sidebar_position: 1
 ---
 
+# YOMOGI Server 利用規約
 ### These terms of services are Japanese only.
 ### Japanese is used to interpret these terms of services.
-# YOMOGI Server 利用規約
 ### 1. 用語の定義
 **1.1** 「YOMOGI Server」「本サーバー」とは、私たちが提供するマインクラフトサーバー、及びDiscordのサーバーを意味します。<br />
 **1.2** 「本サービス」「サービス」とは、YOMOGI Serverを利用して受けとるサービスを意味します。<br />
