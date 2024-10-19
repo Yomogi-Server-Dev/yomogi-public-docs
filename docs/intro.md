@@ -2,47 +2,21 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# はじめに
 
-Let's discover **Docusaurus in less than 5 minutes**.
-hello world
+> 下にスクロールしてください。次のページに進むことができるボタンがあります。
 
-## Getting Started
+Welcome to **YOMOGI Server**！(以下、「よもぎ鯖」と表記)
 
-Get started by **creating a new site**.
+当ガイドページでは、よもぎ鯖のついての情報を初心者の方でも分かるようにお届けしていきます。
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+:::note
+- 参加費 : `無料`
+- ジャンル : `生活＆経済` `ミニゲーム`
+- ミニゲームの種類 : `マイクラ人狼` `銃撃戦` `青鬼`
+- 運営形態 : `ボランティア`
+:::
 
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+:::caution
+- 生活＆経済要素は現在休止中です。絶賛開発中なので一般公開までお楽しみに！
+:::
