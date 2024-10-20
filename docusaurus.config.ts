@@ -27,8 +27,6 @@ const config: Config = {
             {
                 docs: {
                     sidebarPath: './sidebars.ts',
-                    // Please change this to your repo.
-                    // Remove this to remove the "edit this page" links.
                     editUrl:
                         'https://github.com/Yomogi-Server-Dev/guide-docs/blob/main/',
                 },
@@ -38,11 +36,10 @@ const config: Config = {
                         type: ['rss', 'json', 'atom'],
                         xslt: true,
                     },
-                    // Please change this to your repo.
-                    // Remove this to remove the "edit this page" links.
                     editUrl:
                         'https://github.com/Yomogi-Server-Dev/guide-docs/blob/main/',
-                    // Useful options to enforce blogging best practices
+                    blogSidebarCount: 'ALL',
+                    blogSidebarTitle: 'All our posts',
                     onInlineTags: 'warn',
                     onInlineAuthors: 'warn',
                     onUntruncatedBlogPosts: 'warn',
@@ -60,7 +57,7 @@ const config: Config = {
             title: 'Yomogi Server Guide',
             logo: {
                 alt: 'Yomogi Server Guide Logo',
-                src: 'img/logo.svg',
+                src: 'img/yomogi4.png',
             },
             items: [
                 {
