@@ -28,7 +28,7 @@ sidebar_position: 1
 利用規約に同意しない場合、人狼用のVCに参加できません。<br>
 ✅ボタンを押すことで、Discord上の全てのチャンネルが閲覧できるようになります。
 
-![how-to-accept-agreement-1](img/accept_pc.png)
+![how-to-accept-agreement-1](./img/accept_pc.png)
 
 ### ③MinecraftとDiscordを連携する
 あなたが持っているMinecraftアカウントとDiscordアカウントを連携します。<br>
@@ -44,30 +44,30 @@ sidebar_position: 1
  - ゲーマータグは、大文字と小文字を区別して正確に入力してください
 :::
 
-![how-to-linkage-1](img/linkage_1.png)
+![how-to-linkage-1](./img/linkage_1.png)
 
 3. Minecraftの統合版を起動します
 4. 「プレイ」をクリックします
 
-![how-to-linkage-2](img/linkage_2.png)
+![how-to-linkage-2](./img/linkage_2.png)
 
 5. 「サーバー」をクリックします
 6. 下にスクロールし、「サーバーを追加」をクリックします
 
-![how-to-linkage-3](img/linkage_3.png)
+![how-to-linkage-3](./img/linkage_3.png)
 
 7. サーバー名に「よもぎサーバー」、サーバーアドレスに「ymgs.f5.si」、ポートに「19132」と入力し、「保存」をクリックします
 
-![how-to-linkage-4](img/linkage_4.png)
+![how-to-linkage-4](./img/linkage_4.png)
 
 8. 作成したサーバーをクリックします
 9. 「サーバーに接続」をクリックします
 
-![how-to-linkage-5](img/linkage_5.png)
+![how-to-linkage-5](./img/linkage_5.png)
 
 10. 画面に表示される連携コードを確認します
 
-![how-to-linkage-6](img/linkage_6.png)
+![how-to-linkage-6](./img/linkage_6.png)
 
 11. Discordに戻り「1! auth <連携コード>」と入力します
 
@@ -77,4 +77,4 @@ sidebar_position: 1
 - 連携コードを忘れた場合は、再度マインクラフトサーバーに参加することで確認できます
 :::
 
-![how-to-linkage-7](img/linkage_7.png)
+![how-to-linkage-7](./img/linkage_7.png)
