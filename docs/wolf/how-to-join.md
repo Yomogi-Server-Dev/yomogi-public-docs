@@ -38,7 +38,7 @@ sidebar_position: 1
 :::caution 注意
 参加準備は順番通りに行ってください。②の利用規約への同意を行わないと、このチャンネルには移動できません
 :::
-2. 「1! new <あなたのMinecraftゲーマータグ>」とチャットします
+2. 「1! new &lt;あなたのMinecraftゲーマータグ&gt;」とチャットします
 :::caution 注意
  - 1!とnewとゲーマータグの間に、それぞれ半角スペースが必要です
  - ゲーマータグは、大文字と小文字を区別して正確に入力してください
@@ -69,7 +69,7 @@ sidebar_position: 1
 
 ![how-to-linkage-6](./img/linkage_6.png)
 
-11. Discordに戻り「1! auth <連携コード>」と入力します
+11. Discordに戻り「1! auth &lt;連携コード&gt;」と入力します
 
 :::caution 注意
 - 1!とauthと連携コードの間に、それぞれ半角スペースが必要です
