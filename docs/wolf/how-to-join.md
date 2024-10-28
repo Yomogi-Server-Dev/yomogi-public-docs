@@ -25,13 +25,13 @@ sidebar_position: 1
 1. Discordの #おやくそく-rules チャンネルに移動します
 2. ✅ボタンを押して[利用規約](https://yomogi-server-dev.github.io/guide-docs/docs/category/%E5%88%A9%E7%94%A8%E8%A6%8F%E7%B4%84)に同意します。
 
-利用規約に同意しない場合、人狼用のVCに参加できません。<br>
+利用規約に同意しない場合、人狼用のVCに参加できません。<\br>
 ✅ボタンを押すことで、Discord上の全てのチャンネルが閲覧できるようになります。
 
 ![how-to-accept-agreement-1](./img/accept_pc.png)
 
 ### ③MinecraftとDiscordを連携する
-あなたが持っているMinecraftアカウントとDiscordアカウントを連携します。<br>
+あなたが持っているMinecraftアカウントとDiscordアカウントを連携します。<\br>
 人狼サーバーに参加するためには必ずこの操作が必要です。
 
 1. Discordの #bot操作-command チャンネルに移動します
