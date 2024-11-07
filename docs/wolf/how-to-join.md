@@ -18,7 +18,7 @@ sidebar_position: 1
 
 ### ①Discordサーバーに参加する
 
-[こちら](https://discord.gg/5Ck73dDgHs)からよもぎサーバーのDiscordに参加します
+[こちらのDiscordサーバー招待ページ](https://discord.gg/5Ck73dDgHs)からよもぎサーバーのDiscordに参加します
 
 ### ②利用規約に同意する
 
