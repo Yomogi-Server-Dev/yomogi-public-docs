@@ -11,6 +11,8 @@ sidebar_position: 1
  - Discordアカウント
  - Minecraft**統合版**
 
+「Discord」とは主にゲーマー向けに作られたオンラインのチャット・音声通話アプリです。基本的な機能は全て無料で利用できます。
+
 :::caution 注意
  - Minecraft Java版では参加できません
  - Nintendo Switchでも参加できますが、少々操作が必要になります
