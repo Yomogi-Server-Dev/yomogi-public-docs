@@ -2,7 +2,7 @@
 sidebar_position: 7
 ---
 
-# 会議
+# 役職（Basic）
 
 マイクラ人狼Basicで使用する役職について説明します
 
