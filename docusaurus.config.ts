@@ -7,8 +7,8 @@ const config: Config = {
     tagline: 'Dinosaurs are cool',
     favicon: 'img/favicon.ico',
 
-    url: 'https://yomogi-server-dev.github.io/',
-    baseUrl: 'guide-docs/',
+    url: 'https://docs.ymg24.org/',
+    baseUrl: '/',
 
     organizationName: 'yomogi-server-dev',
     projectName: 'guide-docs',
