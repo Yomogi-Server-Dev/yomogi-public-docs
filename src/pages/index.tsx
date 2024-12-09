@@ -6,7 +6,7 @@ export default function Home(): JSX.Element {
     const {siteConfig} = useDocusaurusContext();
 
     useEffect(() => {
-        window.location.href = '/guide-docs/docs/intro';
+        window.location.href = '/docs/intro';
     }, []);
 
     return (
