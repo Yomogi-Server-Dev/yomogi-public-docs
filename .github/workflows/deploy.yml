@@ -1,35 +1,59 @@
-name: Deploy to GitHub Pages
+name: Docusaurus
 
 on:
-  push:
-    branches:
-      - main
+    workflow_dispatch:
+    push:
+        branches: [ main ]
+    pull_request:
+        branches: [ main ]
+
+env:
+    SOURCE_FOLDER: /
 
 jobs:
-  deploy:
-    name: Deploy to GitHub Pages
-    runs-on: ubuntu-latest
-    steps:
-      -
-        uses: actions/checkout@v3
-      -
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: npm
-
-      -
-        name: Install dependencies
-        run: npm ci
-      -
-        name: Build website
-        run: npm run build
-
-      -
-        name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
-          user_name: github-actions[bot]
-          user_email: 41898282+github-actions[bot]@users.noreply.github.com
+    checks:
+        if: github.event_name != 'push'
+        runs-on: ubuntu-latest
+        steps:
+            -   uses: actions/checkout@v4
+            -   uses: actions/setup-node@v4
+                with:
+                    node-version: '18.x'
+            -   name: Test Build
+                run: |
+                    if [ -e yarn.lock ]; then
+                      yarn install --frozen-lockfile
+                    elif [ -e package-lock.json ]; then
+                      npm ci
+                    else
+                      npm i
+                    fi
+                    npm run build
+                working-directory: ${{env.SOURCE_FOLDER}}
+    gh-release:
+        if: github.event_name != 'pull_request'
+        runs-on: ubuntu-latest
+        steps:
+            -   uses: actions/checkout@v4
+            -   uses: actions/setup-node@v4
+                with:
+                    node-version: '18.x'
+            -   uses: webfactory/ssh-agent@v0.5.0
+                with:
+                    ssh-private-key: ${{ secrets.GH_PAGES_DEPLOY }}
+            -   name: Release to GitHub Pages
+                env:
+                    USE_SSH: true
+                    GIT_USER: git
+                run: |
+                    git config --global user.email "51500566+aida0710@users.noreply.github.com"
+                    git config --global user.name "zzz"
+                    if [ -e yarn.lock ]; then
+                      yarn install --frozen-lockfile
+                    elif [ -e package-lock.json ]; then
+                      npm ci
+                    else
+                      npm i
+                    fi
+                    npm run deploy
+                working-directory: ${{env.SOURCE_FOLDER}}
