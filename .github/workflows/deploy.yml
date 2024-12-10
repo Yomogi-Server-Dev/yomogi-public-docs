@@ -8,7 +8,7 @@ on:
         branches: [ main ]
 
 env:
-    SOURCE_FOLDER: /
+    SOURCE_FOLDER: .
 
 jobs:
     checks:
@@ -30,7 +30,8 @@ jobs:
                     fi
                     npm run build
                 working-directory: ${{env.SOURCE_FOLDER}}
-    gh-release:
+
+    deploy:
         if: github.event_name != 'pull_request'
         runs-on: ubuntu-latest
         steps:
@@ -38,16 +39,8 @@ jobs:
             -   uses: actions/setup-node@v4
                 with:
                     node-version: '18.x'
-            -   uses: webfactory/ssh-agent@v0.5.0
-                with:
-                    ssh-private-key: ${{ secrets.GH_PAGES_DEPLOY }}
-            -   name: Release to GitHub Pages
-                env:
-                    USE_SSH: true
-                    GIT_USER: git
+            -   name: Build
                 run: |
-                    git config --global user.email "51500566+aida0710@users.noreply.github.com"
-                    git config --global user.name "zzz"
                     if [ -e yarn.lock ]; then
                       yarn install --frozen-lockfile
                     elif [ -e package-lock.json ]; then
@@ -55,5 +48,14 @@ jobs:
                     else
                       npm i
                     fi
-                    npm run deploy
+                    npm run build
                 working-directory: ${{env.SOURCE_FOLDER}}
+
+            -   name: Deploy to Home Server
+                uses: appleboy/scp-action@master
+                with:
+                    host: ${{ secrets.SERVER_HOST }}
+                    username: ${{ secrets.SERVER_USERNAME }}
+                    key: ${{ secrets.SERVER_SSH_KEY }}
+                    source: "build/"
+                    target: "/home/web/docusaurus/"  # サーバー上のデプロイ先ディレクトリ
