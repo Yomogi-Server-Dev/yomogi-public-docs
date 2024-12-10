@@ -78,15 +78,6 @@ const config: Config = {
             style: 'dark',
             links: [
                 {
-                    title: 'Docs',
-                    items: [
-                        {
-                            label: 'Tutorial',
-                            to: '/docs/intro',
-                        },
-                    ],
-                },
-                {
                     title: 'Community',
                     items: [
                         {
@@ -96,15 +87,19 @@ const config: Config = {
                     ],
                 },
                 {
-                    title: 'More',
+                    title: 'Links',
                     items: [
+                        {
+                            label: 'Docs',
+                            to: '/docs',
+                        },
                         {
                             label: 'Blog',
                             to: '/blog',
                         },
                         {
                             label: 'GitHub',
-                            href: 'https://github.com/Yomogi-Server-Dev/guide-docs',
+                            href: 'https://github.com/Yomogi-Server-Dev/server-management-guide',
                         },
                     ],
                 },

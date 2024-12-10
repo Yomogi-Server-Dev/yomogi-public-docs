@@ -71,7 +71,6 @@
     </editorconfig>
     <yaml>
       <option name="SEQUENCE_ON_NEW_LINE" value="true" />
-      <option name="BLOCK_MAPPING_ON_NEW_LINE" value="true" />
     </yaml>
     <codeStyleSettings language="HTML">
       <option name="SOFT_MARGINS" value="160" />
@@ -150,6 +149,11 @@
       <option name="CODE_STYLE_DEFAULTS" value="KOTLIN_OFFICIAL" />
       <indentOptions>
         <option name="CONTINUATION_INDENT_SIZE" value="4" />
+      </indentOptions>
+    </codeStyleSettings>
+    <codeStyleSettings language="yaml">
+      <indentOptions>
+        <option name="INDENT_SIZE" value="4" />
       </indentOptions>
     </codeStyleSettings>
   </code_scheme>
