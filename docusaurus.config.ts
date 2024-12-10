@@ -87,16 +87,8 @@ const config: Config = {
                     ],
                 },
                 {
-                    title: 'Links',
+                    title: 'More',
                     items: [
-                        {
-                            label: 'Docs',
-                            to: '/docs',
-                        },
-                        {
-                            label: 'Blog',
-                            to: '/blog',
-                        },
                         {
                             label: 'GitHub',
                             href: 'https://github.com/Yomogi-Server-Dev/server-management-guide',
