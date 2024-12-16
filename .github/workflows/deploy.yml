@@ -89,4 +89,4 @@ jobs:
                   # ローカルにserveをインストール
                   npm install serve
                   # screenセッションで静的ファイルサーバーを起動
-                  screen -dmS docusaurus npx serve -s .
+                  screen -dmS docusaurus npx serve -s . -l 28100
