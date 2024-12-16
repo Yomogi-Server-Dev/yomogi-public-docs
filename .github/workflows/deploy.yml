@@ -85,7 +85,7 @@ jobs:
                 port: ${{ secrets.SERVER_SSH_PORT }}
                 key: ${{ secrets.SERVER_SSH_KEY }}
                 script: |
-                  cd /home/web/docusaurus/
+                  cd /home/web/docusaurus/build
                   # ローカルにserveをインストール
                   npm install serve
                   # screenセッションで静的ファイルサーバーを起動
