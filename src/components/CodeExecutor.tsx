@@ -68,7 +68,7 @@ const CodeExecutor: React.FC<CodeExecutorProps> = ({code, language, file_name, v
             </button>
             <div>
                 {output && (
-                    <div>
+                    <div className="mt-2">
                         <h4 className="text-lg font-semibold dark:text-gray-100">実行結果:</h4>
                         <pre
                             className="whitespace-pre-wrap dark:text-gray-300"
