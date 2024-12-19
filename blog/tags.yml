@@ -1,19 +1,34 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+developments:
+  label: Developments
+  permalink: /developments
+  description: 開発に関するお話
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+php:
+  label: PHP
+  permalink: /php
+  description: PHPプログラミング言語に関する記事
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+yomogi:
+  label: Yomogi Server
+  permalink: /yomogi
+  description: よもぎサーバーの最新情報とアップデート
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+life-server:
+  label: Life Server
+  permalink: /life-server
+  description: マインクラフト生活サーバーでの出来事
+
+mcbe:
+  label: Minecraft BE
+  permalink: /mcbe
+  description: マインクラフト統合版に関する情報
+
+tutorials:
+  label: Tutorials
+  permalink: /tutorials
+  description: 初心者向けのガイドやチュートリアル
+
+updates:
+  label: Updates
+  permalink: /updates
+  description: サーバーアップデートやメンテナンス情報
