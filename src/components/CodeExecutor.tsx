@@ -1,10 +1,14 @@
 import React, {useState} from 'react';
+import {Language} from 'prism-react-renderer';
 
 interface CodeExecutorProps {
     code: string;
+    language: Language;
+    file_name: string;
+    version?: string;
 }
 
-const CodeExecutor: React.FC<CodeExecutorProps> = ({code}) => {
+const CodeExecutor: React.FC<CodeExecutorProps> = ({code, language, file_name, version}) => {
     const [output, setOutput] = useState<string>('');
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | null>(null);
@@ -20,11 +24,11 @@ const CodeExecutor: React.FC<CodeExecutorProps> = ({code}) => {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    language: 'php',
-                    version: '*',
+                    language: language,
+                    version: version ? version : '*',
                     files: [
                         {
-                            name: 'main.php',
+                            name: file_name,
                             content: code,
                         },
                     ],
