@@ -5,6 +5,8 @@ authors: [aida]
 tags: [hola, docusaurus]
 ---
 
+import CodeExecutor from '/src/components/CodeExecutor';
+
 yomogi serverは、PocketMine-MP(以下、PMMP)というサーバーソフトを用いて開発されている。<br/>
 このPMMPとはマイクラサーバーにプラグインという形で機能を追加することができる。<br/>
 また、プラグインはPHPというインタプリタ言語によって開発が可能だ。<br/>
@@ -15,9 +17,11 @@ yomogi serverは、PocketMine-MP(以下、PMMP)というサーバーソフトを
 
 以下のサイトを利用して簡単に実行できるので、みなもやってみよう。
 
-```js
-<button onClick={() => alert('button clicked!')}>Click me!</button>
+```php
+<?php
+echo "hello world"
 ```
 
-<button onClick={() => alert('button clicked!')}>Click me!</button>
+<CodeExecutor code="<?php echo 'hello world';" />
+
 
