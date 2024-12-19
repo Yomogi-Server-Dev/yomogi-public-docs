@@ -1,13 +1,9 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx,md,mdx}",
-    "./docs/**/*.{js,jsx,ts,tsx,md,mdx}",
-    "./blog/**/*.{js,jsx,ts,tsx,md,mdx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-  darkMode: ['class', '[data-theme="dark"]'],
+export const content = [
+  './src/components/**/*.{js,jsx,ts,tsx}', // componentsディレクトリのみに制限
+];
+export const theme = {
+  extend: {},
 };
+export const plugins = [];
+export const darkMode = ['class', '[data-theme="dark"]'];
