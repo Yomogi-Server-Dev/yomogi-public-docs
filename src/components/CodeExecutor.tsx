@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 
 interface CodeExecutorProps {
     code: string;
 }
 
-const CodeExecutor: React.FC<CodeExecutorProps> = ({ code }) => {
+const CodeExecutor: React.FC<CodeExecutorProps> = ({code}) => {
     const [output, setOutput] = useState<string>('');
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | null>(null);
@@ -21,14 +21,14 @@ const CodeExecutor: React.FC<CodeExecutorProps> = ({ code }) => {
                 },
                 body: JSON.stringify({
                     language: 'php',
-                    version: '*',  // Latest version
+                    version: '*',
                     files: [
                         {
                             name: 'main.php',
-                            content: code
-                        }
-                    ]
-                })
+                            content: code,
+                        },
+                    ],
+                }),
             });
 
             if (!response.ok) {
@@ -37,7 +37,7 @@ const CodeExecutor: React.FC<CodeExecutorProps> = ({ code }) => {
             }
 
             const data = await response.json();
-            console.log('API Response:', data); // デバッグ用
+            // console.log('API Response:', data);
 
             if (data.run) {
                 setOutput(data.run.output || data.run.stdout);
@@ -47,7 +47,7 @@ const CodeExecutor: React.FC<CodeExecutorProps> = ({ code }) => {
                 setError('予期せぬエラーが発生しました');
             }
         } catch (err) {
-            console.error('Error details:', err); // デバッグ用
+            // console.error('Error details:', err);
             setError('実行中にエラーが発生しました: ' + (err as Error).message);
         } finally {
             setIsLoading(false);
@@ -55,28 +55,33 @@ const CodeExecutor: React.FC<CodeExecutorProps> = ({ code }) => {
     };
 
     return (
-        <div className="my-4">
+        <div className="my-4 p-4 border border-gray-200 dark:border-gray-700 rounded-lg dark:bg-gray-800">
             <button
                 onClick={executeCode}
                 disabled={isLoading}
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            >
+                className="px-4 py-2 bg-emerald-500 dark:bg-emerald-900 text-white rounded hover:bg-emerald-700 hover:dark:bg-emerald-700 disabled:opacity-50 transition-colors">
                 {isLoading ? '実行中...' : 'コードを実行'}
             </button>
+            <div>
+                {output && (
+                    <div>
+                        <h4 className="text-lg font-semibold dark:text-gray-100">実行結果:</h4>
+                        <pre
+                            className="whitespace-pre-wrap dark:text-gray-300"
+                            dangerouslySetInnerHTML={{
+                                __html: output.replace(/\n/g, '<br>'),
+                            }}
+                        />
+                    </div>
+                )}
 
-            {output && (
-                <div className="mt-4 p-4 bg-gray-100 rounded">
-                    <h4 className="font-bold mb-2">実行結果:</h4>
-                    <pre className="whitespace-pre-wrap">{output}</pre>
-                </div>
-            )}
-
-            {error && (
-                <div className="mt-4 p-4 bg-red-100 text-red-700 rounded">
-                    <h4 className="font-bold mb-2">エラー:</h4>
-                    <pre className="whitespace-pre-wrap">{error}</pre>
-                </div>
-            )}
+                {error && (
+                    <div>
+                        <h4 className="text-lg font-semibold text-red-700 dark:text-red-400">エラー:</h4>
+                        <pre className="text-red-600 dark:text-red-400">{error}</pre>
+                    </div>
+                )}
+            </div>
         </div>
     );
 };
