@@ -32,3 +32,8 @@ updates:
   label: Updates
   permalink: /updates
   description: サーバーアップデートやメンテナンス情報
+
+programming:
+  label: Programing
+  permalink: /programming
+  description: プログラミング関係
