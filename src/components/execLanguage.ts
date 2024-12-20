@@ -1,4 +1,4 @@
-export enum Language {
+export enum ExecLanguage {
     AWK = "awk",
     Bash = "bash",
     Befunge93 = "befunge93",

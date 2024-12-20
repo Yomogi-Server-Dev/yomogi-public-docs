@@ -2,11 +2,11 @@
 slug: lets-try-programming
 title: プログラミングに挑戦してみよう！
 authors: [aida]
-tags: [developments, php, programming, tutorial]
+tags: [developments, php, programming, tutorials]
 ---
 
-import CodeExecutor from '/src/components/CodeExecutor';
-import {Language} from '../src/components/language';
+import EditableCodeExecutor from '/src/components/EditableCodeExecutor';
+import {ExecLanguage} from '../src/components/execLanguage';
 
 今回は、サーバー開発に使用しているプログラミング言語のPHPについて紹介していく！
 
@@ -17,6 +17,7 @@ PHPは主にWebサイトやWebアプリケーションの開発に使われる�
 PHPは比較的入門しやすい言語として知られていて、私も初めての言語はPHPでした！
 
 なので今回は、PHPの基本的な書き方や機能を、実際に動作させながら一緒に勉強してみましょう！
+**書き換えることも可能です！是非実行して仕組みを理解してください**
 
 <!-- truncate -->
 
@@ -26,15 +27,11 @@ PHPは比較的入門しやすい言語として知られていて、私も初�
 いわゆる文字列の出力ですね！
 やっていきましょう！
 
-```php
-<?php
-echo "Hello World";
-```
-<CodeExecutor
-    code={`<?php
-        echo 'hello world';
-    `}
-    language={Language.PHP}
+<EditableCodeExecutor
+    initialCode={`<?php
+echo 'hello world';
+`}
+    execLanguage={ExecLanguage.PHP}
     file_name={"hello.php"}
 />
 
@@ -46,37 +43,25 @@ echo "Hello World";
 
 PHPでは変数名の前に**$**をつけるのが特徴です！許せん！
 
-```php
-<?php
+<EditableCodeExecutor
+    initialCode={`<?php
 $message = "Hello PHP!";
 echo $message;
-```
-
-<CodeExecutor
-    code={`<?php
-        $message = 'Hello PHP!';
-        echo $message;
-    `}
-    language={Language.PHP}
+`}
+    execLanguage={ExecLanguage.PHP}
     file_name={"variables.php"}
 />
 
 変数は便利になんにでも使えるんです！
 例えば以下のように計算などにも使うことが可能です。
 
-```php
-<?php
+<EditableCodeExecutor
+    initialCode={`<?php
 $a = 5;
 $b = 3;
 echo $a + $b;  // 8が出力されます
-```
-<CodeExecutor
-    code={`<?php
-        $a = 5;
-        $b = 3;
-        echo $a + $b;
-    `}
-    language={Language.PHP}
+`}
+    execLanguage={ExecLanguage.PHP}
     file_name={"calculation.php"}
 />
 
@@ -87,55 +72,36 @@ echo $a + $b;  // 8が出力されます
 「もし〜なら、こうする」という処理ができます！
 例えば、年齢によって成人かどうかを判定してみましょう。
 
-```php
-<?php
+<EditableCodeExecutor
+    initialCode={`<?php
 $age = 20;
 if ($age >= 18) {
-    echo "成人です";
+    echo '成人です';
 } else {
-    echo "未成年です";
+    echo '未成年です';
 }
-```
-<CodeExecutor
-    code={`<?php
-        $age = 20;
-        if ($age >= 18) {
-            echo '成人です';
-        } else {
-            echo '未成年です';
-        }
-    `}
-    language={Language.PHP}
+`}
+    execLanguage={ExecLanguage.PHP}
     file_name={"conditions.php"}
 />
 
 また、「〜の間、繰り返す」というwhile文もよく使います。
 例えば、カウントダウンを作ってみましょう！
 
-```
-<?php
+<EditableCodeExecutor
+    initialCode={`<?php
 $count = 5;
 while ($count > 0) {
-    echo $count . "...\n";
+    echo $count . "...\\n";
     $count = $count - 1;
 }
 echo "Start!";
-```
-
-<CodeExecutor
-    code={`<?php
-        $count = 5;
-        while ($count > 0) {
-            echo $count . "...\n";
-            $count = $count - 1;
-        }
-        echo "Start!";
-    `}
-    language={Language.PHP}
+`}
+    execLanguage={ExecLanguage.PHP}
     file_name={"while_loop.php"}
 />
 
-このように、**while文**を使うと条件が満たされている間、処理を繰り返すことができます。
+このように、**while文**を使うと条件が満たされている間、処理を繰り返すことが可能です。
 
 ゲームの中でも、「**HPが0になるまで**」とか「**制限時間が終わるまで**」といった場面でよく使われる処理です。
 
@@ -146,20 +112,14 @@ echo "Start!";
 
 例えば、果物の名前をリストアップしてみましょう！
 
-```php
-<?php
+<EditableCodeExecutor
+    initialCode={`<?php
 // 配列の作成
 $fruits = ["りんご", "バナナ", "オレンジ"];
 // 配列の要素を出力
 echo $fruits[0];  // りんご が出力されます
-```
-
-<CodeExecutor
-    code={`<?php
-        $fruits = ['りんご', 'バナナ', 'オレンジ'];
-        echo $fruits[0];
-    `}
-    language={Language.PHP}
+`}
+    execLanguage={ExecLanguage.PHP}
     file_name={"array_basic.php"}
 />
 
@@ -168,22 +128,14 @@ echo $fruits[0];  // りんご が出力されます
 
 foreachを使うと、配列の中身を順番に取り出せます！
 
-```php
-<?php
+<EditableCodeExecutor
+    initialCode={`<?php
 $fruits = ["りんご", "バナナ", "オレンジ"];
 foreach ($fruits as $fruit) {
-    echo $fruit . "\n";
+    echo $fruit . "\\n";
 }
-```
-
-<CodeExecutor
-    code={`<?php
-        $fruits = ['りんご', 'バナナ', 'オレンジ'];
-        foreach ($fruits as $fruit) {
-            echo $fruit . '\n';
-        }
-    `}
-    language={Language.PHP}
+`}
+    execLanguage={ExecLanguage.PHP}
     file_name={"array_loop.php"}
 />
 
@@ -192,30 +144,18 @@ PHPには普通の配列の他に、**連想配列**という便利な機能も�
 データに名前（キー）をつけて管理できるんです！
 例えば、果物の値段を管理してみましょう！
 
-```php
-<?php
+<EditableCodeExecutor
+    initialCode={`<?php
 $fruit_prices = [
     "りんご" => 150,
     "バナナ" => 100,
     "オレンジ" => 120
 ];
 foreach ($fruit_prices as $fruit => $price) {
-    echo $fruit . "は" . $price . "円です\n";
+    echo $fruit . "は" . $price . "円です\\n";
 }
-```
-
-<CodeExecutor
-    code={`<?php
-        $fruit_prices = [
-            "りんご" => 150,
-            "バナナ" => 100,
-            "オレンジ" => 120
-        ];
-        foreach ($fruit_prices as $fruit => $price) {
-            echo $fruit . "は" . $price . "円です\n";
-        }
-    `}
-    language={Language.PHP}
+`}
+    execLanguage={ExecLanguage.PHP}
     file_name={"associative_array.php"}
 />
 
@@ -230,12 +170,12 @@ foreach ($fruit_prices as $fruit => $price) {
 
 その配列を操作する便利な関数がPHPにはたくさん用意されています！
 
-```php
-<?php
+<EditableCodeExecutor
+    initialCode={`<?php
 $numbers = [3, 1, 4, 1, 5];
 
 // 配列の要素数を数える
-echo count($numbers); // 5
+echo count($numbers) . \\n; // 5
 
 // 配列の並び替え
 sort($numbers);  // 昇順
@@ -245,25 +185,8 @@ echo implode(", ", $numbers); // 1, 1, 3, 4, 5
 array_push($numbers, 9);
 // または
 $numbers[] = 9;
-```
-
-<CodeExecutor
-    code={`<?php
-        $numbers = [3, 1, 4, 1, 5];
-
-        // 配列の要素数を数える
-        echo count($numbers); // 5
-
-        // 配列の並び替え
-        sort($numbers);  // 昇順
-        echo implode(", ", $numbers); // 1, 1, 3, 4, 5
-
-        // 配列に要素を追加
-        array_push($numbers, 9);
-        // または
-        $numbers[] = 9;
-    `}
-    language={Language.PHP}
+`}
+    execLanguage={ExecLanguage.PHP}
     file_name={"array_functions.php"}
 />
 
@@ -275,31 +198,19 @@ $numbers[] = 9;
 
 [例: 配列関係の関数一覧](https://www.php.net/manual/ja/book.array.php)
 
-```php
-<?php
+<EditableCodeExecutor
+    initialCode={`<?php
 // 文字列関連
 $text = "Hello PHP";
-echo strlen($text) . "\n";  // 文字列の長さ: 9
-echo strtoupper($text) . "\n";  // 大文字に: HELLO PHP
-echo substr($text, 0, 5) . "\n";  // 部分文字列: Hello
+echo strlen($text) . "\\n";  // 文字列の長さ: 9
+echo strtoupper($text) . "\\n";  // 大文字に: HELLO PHP
+echo substr($text, 0, 5) . "\\n";  // 部分文字列: Hello
 
 // 数値関連
-echo round(3.14159, 2) . "\n";  // 小数点以下2桁に丸める: 3.14
+echo round(3.14159, 2) . "\\n";  // 小数点以下2桁に丸める: 3.14
 echo rand(1, 6);  // 1から6のランダムな数
-```
-<CodeExecutor
-    code={`<?php
-        // 文字列関連
-        $text = "Hello PHP";
-        echo strlen($text) . "\n";
-        echo strtoupper($text) . "\n";
-        echo substr($text, 0, 5) . "\n";
-
-        // 数値関連
-        echo round(3.14159, 2) . "\n";
-        echo rand(1, 6);
-    `}
-    language={Language.PHP}
+`}
+    execLanguage={ExecLanguage.PHP}
     file_name={"string_number_functions.php"}
 />
 
@@ -310,8 +221,8 @@ echo rand(1, 6);  // 1から6のランダムな数
 
 関数を使うことで**処理をわかりやすく抽象化、共通化**することが可能です。
 
-```php
-<?php
+<EditableCodeExecutor
+    initialCode={`<?php
 // 関数の定義
 function calculateTax($price, $taxRate = 0.1) {
     return $price * (1 + $taxRate);
@@ -319,22 +230,10 @@ function calculateTax($price, $taxRate = 0.1) {
 
 // 関数の使用
 $price = 1000;
-echo calculateTax($price) . "\n";  // 1100
+echo calculateTax($price) . "\\n";  // 1100
 echo calculateTax($price, 0.08);  // 1080
-```
-<CodeExecutor
-    code={`<?php
-        // 関数の定義
-        function calculateTax($price, $taxRate = 0.1) {
-            return $price * (1 + $taxRate);
-        }
-
-        // 関数の使用
-        $price = 1000;
-        echo calculateTax($price) . "\n";  // 1100
-        echo calculateTax($price, 0.08);  // 1080
 `}
-    language={Language.PHP}
+    execLanguage={ExecLanguage.PHP}
     file_name={"tax_calculator.php"}
 />
 
@@ -345,8 +244,8 @@ echo calculateTax($price, 0.08);  // 1080
 
 例えば、商品の情報を管理するクラスを作ってみましょう。
 
-```php
-<?php
+<EditableCodeExecutor
+    initialCode={`<?php
 class Product {
     // プロパティ
     private $name;
@@ -360,7 +259,7 @@ class Product {
 
     // メソッド
     public function getInfo() {
-        return "{$this->name}は{$this->price}円です\n";
+        return "{$this->name}は{$this->price}円です\\n";
     }
 
     // 税込価格を計算するメソッド
@@ -373,37 +272,8 @@ class Product {
 $apple = new Product("りんご", 150);
 echo $apple->getInfo();
 echo "税込価格: " . $apple->getPriceWithTax() . "円";
-```
-<CodeExecutor
-    code={`<?php
-        class Product {
-            // プロパティ
-            private $name;
-            private $price;
-
-            // コンストラクタ
-            public function __construct($name, $price) {
-                $this->name = $name;
-                $this->price = $price;
-            }
-
-            // メソッド
-            public function getInfo() {
-                return "{$this->name}は{$this->price}円です";
-            }
-
-            // 税込価格を計算するメソッド
-            public function getPriceWithTax($taxRate = 0.1) {
-                return $this->price * (1 + $taxRate);
-            }
-        }
-
-        // クラスの使用
-        $apple = new Product("りんご", 150);
-        echo $apple->getInfo();
-        echo "税込価格: " . $apple->getPriceWithTax() . "円\n";
-    `}
-    language={Language.PHP}
+`}
+    execLanguage={ExecLanguage.PHP}
     file_name={"product_class.php"}
 />
 
