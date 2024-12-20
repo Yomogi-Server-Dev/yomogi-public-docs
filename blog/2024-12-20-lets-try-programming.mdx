@@ -5,7 +5,7 @@ authors: [aida]
 tags: [developments, php, programming, tutorials]
 ---
 
-import EditableCodeExecutor from '/src/components/EditableCodeExecutor';
+import CodeExecutor from '/src/components/CodeExecutor';
 import {ExecLanguage} from '../src/components/execLanguage';
 
 今回は、サーバー開発に使用しているプログラミング言語のPHPについて紹介していく！
@@ -27,7 +27,7 @@ PHPは比較的入門しやすい言語として知られていて、私も初�
 いわゆる文字列の出力ですね！
 やっていきましょう！
 
-<EditableCodeExecutor
+<CodeExecutor
     initialCode={`<?php
 echo 'hello world';
 `}
@@ -43,7 +43,7 @@ echo 'hello world';
 
 PHPでは変数名の前に**$**をつけるのが特徴です！許せん！
 
-<EditableCodeExecutor
+<CodeExecutor
     initialCode={`<?php
 $message = "Hello PHP!";
 echo $message;
@@ -55,7 +55,7 @@ echo $message;
 変数は便利になんにでも使えるんです！
 例えば以下のように計算などにも使うことが可能です。
 
-<EditableCodeExecutor
+<CodeExecutor
     initialCode={`<?php
 $a = 5;
 $b = 3;
@@ -72,7 +72,7 @@ echo $a + $b;  // 8が出力されます
 「もし〜なら、こうする」という処理ができます！
 例えば、年齢によって成人かどうかを判定してみましょう。
 
-<EditableCodeExecutor
+<CodeExecutor
     initialCode={`<?php
 $age = 20;
 if ($age >= 18) {
@@ -88,7 +88,7 @@ if ($age >= 18) {
 また、「〜の間、繰り返す」というwhile文もよく使います。
 例えば、カウントダウンを作ってみましょう！
 
-<EditableCodeExecutor
+<CodeExecutor
     initialCode={`<?php
 $count = 5;
 while ($count > 0) {
@@ -112,7 +112,7 @@ echo "Start!";
 
 例えば、果物の名前をリストアップしてみましょう！
 
-<EditableCodeExecutor
+<CodeExecutor
     initialCode={`<?php
 // 配列の作成
 $fruits = ["りんご", "バナナ", "オレンジ"];
@@ -128,7 +128,7 @@ echo $fruits[0];  // りんご が出力されます
 
 foreachを使うと、配列の中身を順番に取り出せます！
 
-<EditableCodeExecutor
+<CodeExecutor
     initialCode={`<?php
 $fruits = ["りんご", "バナナ", "オレンジ"];
 foreach ($fruits as $fruit) {
@@ -144,7 +144,7 @@ PHPには普通の配列の他に、**連想配列**という便利な機能も�
 データに名前（キー）をつけて管理できるんです！
 例えば、果物の値段を管理してみましょう！
 
-<EditableCodeExecutor
+<CodeExecutor
     initialCode={`<?php
 $fruit_prices = [
     "りんご" => 150,
@@ -170,7 +170,7 @@ foreach ($fruit_prices as $fruit => $price) {
 
 その配列を操作する便利な関数がPHPにはたくさん用意されています！
 
-<EditableCodeExecutor
+<CodeExecutor
     initialCode={`<?php
 $numbers = [3, 1, 4, 1, 5];
 
@@ -198,7 +198,7 @@ $numbers[] = 9;
 
 [例: 配列関係の関数一覧](https://www.php.net/manual/ja/book.array.php)
 
-<EditableCodeExecutor
+<CodeExecutor
     initialCode={`<?php
 // 文字列関連
 $text = "Hello PHP";
@@ -221,7 +221,7 @@ echo rand(1, 6);  // 1から6のランダムな数
 
 関数を使うことで**処理をわかりやすく抽象化、共通化**することが可能です。
 
-<EditableCodeExecutor
+<CodeExecutor
     initialCode={`<?php
 // 関数の定義
 function calculateTax($price, $taxRate = 0.1) {
@@ -244,7 +244,7 @@ echo calculateTax($price, 0.08);  // 1080
 
 例えば、商品の情報を管理するクラスを作ってみましょう。
 
-<EditableCodeExecutor
+<CodeExecutor
     initialCode={`<?php
 class Product {
     // プロパティ
