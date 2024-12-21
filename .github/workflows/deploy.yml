@@ -1,92 +1,94 @@
 name: Docusaurus
 
 on:
-    workflow_dispatch:
-    push:
-        branches: [main]
-    pull_request:
-        branches: [main]
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 env:
-    SOURCE_FOLDER: .
+  SOURCE_FOLDER: .
 
 jobs:
-    checks:
-        if: github.event_name != 'push'
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v4
-            - uses: actions/setup-node@v4
-              with:
-                  node-version: "18.x"
-            - name: Test Build
-              run: |
-                  if [ -e yarn.lock ]; then
-                    yarn install --frozen-lockfile
-                  elif [ -e package-lock.json ]; then
-                    npm ci
-                  else
-                    npm i
-                  fi
-                  npm run build
-              working-directory: ${{env.SOURCE_FOLDER}}
+  checks:
+    if: github.event_name != 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "18.x"
+      - name: Test Build
+        run: |
+          if [ -e yarn.lock ]; then
+            yarn install --frozen-lockfile
+          elif [ -e package-lock.json ]; then
+            npm ci
+          else
+            npm i
+          fi
+          npm run build
+        working-directory: ${{env.SOURCE_FOLDER}}
 
-    deploy:
-        if: github.event_name != 'pull_request'
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v4
-            - uses: actions/setup-node@v4
-              with:
-                  node-version: "18.x"
-            - name: Build
-              run: |
-                  if [ -e yarn.lock ]; then
-                    yarn install --frozen-lockfile
-                  elif [ -e package-lock.json ]; then
-                    npm ci
-                  else
-                    npm i
-                  fi
-                  npm run build
-              working-directory: ${{env.SOURCE_FOLDER}}
+  deploy:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "18.x"
+      - name: Build
+        run: |
+          if [ -e yarn.lock ]; then
+            yarn install --frozen-lockfile
+          elif [ -e package-lock.json ]; then
+            npm ci
+          else
+            npm i
+          fi
+          npm run build
+        working-directory: ${{env.SOURCE_FOLDER}}
 
-            # クリーンアップと再起動
-            - name: Cleanup and Prepare
-              uses: appleboy/ssh-action@master
-              with:
-                  host: ${{ secrets.SERVER_HOST }}
-                  username: ${{ secrets.SERVER_USERNAME }}
-                  port: ${{ secrets.SERVER_SSH_PORT }}
-                  key: ${{ secrets.SERVER_SSH_KEY }}
-                  script: |
-                      # 既存のscreen sessionを終了
-                      screen -X -S docusaurus quit || true
-                      # 既存のプロジェクトを削除
-                      rm -rf /home/web/docusaurus/*
+      # クリーンアップと再起動
+      - name: Cleanup and Prepare
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          port: ${{ secrets.SERVER_SSH_PORT }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          script: |
+            # すべての dev-docusaurus セッションを終了
+            for session in $(screen -ls | grep dev-docusaurus | awk '{print $1}'); do
+              screen -X -S $session quit || true
+            done
+            # 既存のプロジェクトを削除
+            rm -rf /home/web/docusaurus/*
 
-            # デプロイ
-            - name: Deploy to Home Server
-              uses: appleboy/scp-action@master
-              with:
-                  host: ${{ secrets.SERVER_HOST }}
-                  username: ${{ secrets.SERVER_USERNAME }}
-                  port: ${{ secrets.SERVER_SSH_PORT }}
-                  key: ${{ secrets.SERVER_SSH_KEY }}
-                  source: "build/"
-                  target: "/home/web/docusaurus/"
+      # デプロイ
+      - name: Deploy to Home Server
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          port: ${{ secrets.SERVER_SSH_PORT }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          source: "build/"
+          target: "/home/web/docusaurus/"
 
-            # 新しいscreen sessionでサービス起動
-            - name: Start Service
-              uses: appleboy/ssh-action@master
-              with:
-                host: ${{ secrets.SERVER_HOST }}
-                username: ${{ secrets.SERVER_USERNAME }}
-                port: ${{ secrets.SERVER_SSH_PORT }}
-                key: ${{ secrets.SERVER_SSH_KEY }}
-                script: |
-                  cd /home/web/docusaurus/build
-                  # ローカルにserveをインストール
-                  npm install serve
-                  # screenセッションで静的ファイルサーバーを起動
-                  screen -dmS docusaurus npx serve -s . -l 28100
+      # 新しいscreen sessionでサービス起動
+      - name: Start Service
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          port: ${{ secrets.SERVER_SSH_PORT }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          script: |
+            cd /home/web/docusaurus/build
+            # ローカルにserveをインストール
+            npm install serve
+            # screenセッションで静的ファイルサーバーを起動
+            screen -dmS docusaurus npx serve -s . -l 28100
