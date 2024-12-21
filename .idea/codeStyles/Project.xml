@@ -71,7 +71,6 @@
     </editorconfig>
     <yaml>
       <option name="SEQUENCE_ON_NEW_LINE" value="true" />
-      <option name="BLOCK_MAPPING_ON_NEW_LINE" value="true" />
     </yaml>
     <codeStyleSettings language="HTML">
       <option name="SOFT_MARGINS" value="160" />

@@ -1,23 +1,29 @@
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
+matsuyuki:
+  name: Matsuyuki
+  title: Matsuyuki
+  url: https://github.com/matsuyuki1231
+  image_url: https://github.com/matsuyuki1231.png
   page: true
   socials:
-    x: yangshunz
-    github: yangshun
+    x: matsuyuki1231
+    github: matsuyuki1231
 
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
-  page:
-    # customize the url of the author page at /blog/authors/<permalink>
-    permalink: '/all-sebastien-lorber-articles'
+aida:
+  name: Masaki Aida
+  title: Masaki Aida
+  url: https://github.com/aida0710
+  image_url: https://github.com/aida0710.png
+  page: true
   socials:
-    x: sebastienlorber
-    linkedin: sebastienlorber
-    github: slorber
-    newsletter: https://thisweekinreact.com
+    x: aida_0710
+    github: aida0710
+
+Byakko9:
+  name: Byakko9
+  title: Byakko9
+  url: https://github.com/Byakkono
+  image_url: https://pbs.twimg.com/profile_images/1500136099141722114/EUgomZ7Y_400x400.jpg
+  page: true
+  socials:
+    x: saga114514
+    github: Byakkono

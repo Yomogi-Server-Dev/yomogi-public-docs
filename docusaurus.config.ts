@@ -7,8 +7,8 @@ const config: Config = {
     tagline: 'Dinosaurs are cool',
     favicon: 'img/favicon.ico',
 
-    url: 'https://yomogi-server-dev.github.io/',
-    baseUrl: 'guide-docs/',
+    url: 'https://docs.ymg24.org/',
+    baseUrl: '/',
 
     organizationName: 'yomogi-server-dev',
     projectName: 'guide-docs',
@@ -45,10 +45,26 @@ const config: Config = {
                     onUntruncatedBlogPosts: 'warn',
                 },
                 theme: {
-                    customCss: './src/css/custom.css',
+                    customCss: [
+                        './src/css/custom.css',
+                        './src/css/tailwind.css',
+                    ]
                 },
             } satisfies Preset.Options,
         ],
+    ],
+
+    plugins: [
+        async function tailwindcss() {
+            return {
+                name: 'docusaurus-tailwindcss',
+                configurePostCss(postcssOptions) {
+                    postcssOptions.plugins.push(require('tailwindcss'));
+                    postcssOptions.plugins.push(require('autoprefixer'));
+                    return postcssOptions;
+                },
+            };
+        },
     ],
 
     themeConfig: {
@@ -78,15 +94,6 @@ const config: Config = {
             style: 'dark',
             links: [
                 {
-                    title: 'Docs',
-                    items: [
-                        {
-                            label: 'Tutorial',
-                            to: '/docs/intro',
-                        },
-                    ],
-                },
-                {
                     title: 'Community',
                     items: [
                         {
@@ -99,12 +106,8 @@ const config: Config = {
                     title: 'More',
                     items: [
                         {
-                            label: 'Blog',
-                            to: '/blog',
-                        },
-                        {
                             label: 'GitHub',
-                            href: 'https://github.com/Yomogi-Server-Dev/guide-docs',
+                            href: 'https://github.com/Yomogi-Server-Dev/server-management-guide',
                         },
                     ],
                 },

@@ -1,0 +1,291 @@
+---
+slug: lets-try-programming
+title: プログラミングに挑戦してみよう！
+authors: [aida]
+tags: [developments, php, programming, tutorials]
+---
+
+import CodeExecutor from '/src/components/CodeExecutor';
+import {ExecLanguage} from '../src/components/execLanguage';
+
+今回は、サーバー開発に使用しているプログラミング言語のPHPについて紹介していく！
+
+PHPは主にWebサイトやWebアプリケーションの開発に使われる言語なんですが、なんとマインクラフトのサーバー開発にも使えるんです！
+
+よもぎサーバーは、PocketMine-MP(通称PMMP)というソフトウェアを使って運営されているのですが、このPMMPの面白いところは、PHPというプログラミング言語でプラグインを開発できる点なんです。
+
+PHPは比較的入門しやすい言語として知られていて、私も初めての言語はPHPでした！
+
+なので今回は、PHPの基本的な書き方や機能を、実際に動作させながら一緒に勉強してみましょう！
+**書き換えることも可能です！是非実行して仕組みを理解してください**
+
+<!-- truncate -->
+
+## 1. 基本的な出力と変数
+
+まずは伝統の「Hello World」から始めていきます。
+いわゆる文字列の出力ですね！
+やっていきましょう！
+
+<CodeExecutor
+    initialCode={`<?php
+echo 'hello world';
+`}
+    execLanguage={ExecLanguage.PHP}
+    file_name={"hello.php"}
+/>
+
+このようにechoを使うと、好きな文字列を出力できます！
+プログラミングの第一歩といったところでしょうか！
+
+次は、変数について見ていきましょう。
+変数というのは、**データを一時的に保存できる箱**みたいなものです。
+
+PHPでは変数名の前に「$」をつけるのが特徴です！許せん！
+
+<CodeExecutor
+    initialCode={`<?php
+$message = "Hello PHP!";
+echo $message;
+`}
+    execLanguage={ExecLanguage.PHP}
+    file_name={"variables.php"}
+/>
+
+変数は便利になんにでも使えるんです！
+例えば以下のように計算などにも使うことが可能です。
+
+<CodeExecutor
+    initialCode={`<?php
+$a = 5;
+$b = 3;
+echo $a + $b;  // 8が出力されます
+`}
+    execLanguage={ExecLanguage.PHP}
+    file_name={"calculation.php"}
+/>
+
+## 2. 制御構文（条件分岐とループ）
+
+条件分岐も見てみましょう。
+
+「もし〜なら、こうする」という処理ができます！
+例えば、年齢によって成人かどうかを判定してみましょう。
+
+<CodeExecutor
+    initialCode={`<?php
+$age = 20;
+if ($age >= 18) {
+    echo '成人です';
+} else {
+    echo '未成年です';
+}
+`}
+    execLanguage={ExecLanguage.PHP}
+    file_name={"conditions.php"}
+/>
+
+また、「〜の間、繰り返す」というwhile文もよく使います。
+例えば、カウントダウンを作ってみましょう！
+
+<CodeExecutor
+    initialCode={`<?php
+$count = 5;
+while ($count > 0) {
+    echo $count . "...\\n";
+    $count = $count - 1;
+}
+echo "Start!";
+`}
+    execLanguage={ExecLanguage.PHP}
+    file_name={"while_loop.php"}
+/>
+
+このように、**while文**を使うと条件が満たされている間、処理を繰り返すことが可能です。
+
+ゲームの中でも、「**HPが0になるまで**」とか「**制限時間が終わるまで**」といった場面でよく使われる処理です。
+
+## 3. データ構造（配列と連想配列）
+
+次は配列というものを使ってみましょう。
+配列は、複数のデータをまとめて管理できる便利な機能です。
+
+例えば、果物の名前をリストアップしてみましょう！
+
+<CodeExecutor
+    initialCode={`<?php
+// 配列の作成
+$fruits = ["りんご", "バナナ", "オレンジ"];
+// 配列の要素を出力
+echo $fruits[0];  // りんご が出力されます
+`}
+    execLanguage={ExecLanguage.PHP}
+    file_name={"array_basic.php"}
+/>
+
+配列の中身を見るのに、一つずつ手動で表示するのはちょっと大変ですよね。
+そんなときは**ループ処理**の出番です！
+
+foreachを使うと、配列の中身を順番に取り出せます！
+
+<CodeExecutor
+    initialCode={`<?php
+$fruits = ["りんご", "バナナ", "オレンジ"];
+foreach ($fruits as $fruit) {
+    echo $fruit . "\\n";
+}
+`}
+    execLanguage={ExecLanguage.PHP}
+    file_name={"array_loop.php"}
+/>
+
+PHPには普通の配列の他に、**連想配列**という便利な機能もあります。
+
+データに名前（キー）をつけて管理できるんです！
+例えば、果物の値段を管理してみましょう！
+
+<CodeExecutor
+    initialCode={`<?php
+$fruit_prices = [
+    "りんご" => 150,
+    "バナナ" => 100,
+    "オレンジ" => 120
+];
+foreach ($fruit_prices as $fruit => $price) {
+    echo $fruit . "は" . $price . "円です\\n";
+}
+`}
+    execLanguage={ExecLanguage.PHP}
+    file_name={"associative_array.php"}
+/>
+
+## 4. 便利な組み込み関数
+
+これらのコードでちょっとだけPHP及びプログラミングに触れてみましたが、どうでしょうか？
+
+実際に動くコードを見ながら学んでいくと面白いですよね！
+
+では、もう少し実用的な機能を見ていきましょう。
+プログラミングって意外と配列（データの集まり）をよく使うんです。
+
+その配列を操作する便利な関数がPHPにはたくさん用意されています！
+
+<CodeExecutor
+    initialCode={`<?php
+$numbers = [3, 1, 4, 1, 5];
+
+// 配列の要素数を数える
+echo count($numbers) . \\n; // 5
+
+// 配列の並び替え
+sort($numbers);  // 昇順
+echo implode(", ", $numbers); // 1, 1, 3, 4, 5
+
+// 配列に要素を追加
+array_push($numbers, 9);
+// または
+$numbers[] = 9;
+`}
+    execLanguage={ExecLanguage.PHP}
+    file_name={"array_functions.php"}
+/>
+
+今まで使ってきた関数(array_push, countなど)は**ビルドイン関数**といってPHPで最初から使える便利機能です！
+
+一覧は以下の公式ドキュメントに記載されていますが、今回は少しだけ例を見てみましょう！
+
+[公式ドキュメント](https://www.php.net/manual/ja/funcref.php)
+
+[例: 配列関係の関数一覧](https://www.php.net/manual/ja/book.array.php)
+
+<CodeExecutor
+    initialCode={`<?php
+// 文字列関連
+$text = "Hello PHP";
+echo strlen($text) . "\\n";  // 文字列の長さ: 9
+echo strtoupper($text) . "\\n";  // 大文字に: HELLO PHP
+echo substr($text, 0, 5) . "\\n";  // 部分文字列: Hello
+
+// 数値関連
+echo round(3.14159, 2) . "\\n";  // 小数点以下2桁に丸める: 3.14
+echo rand(1, 6);  // 1から6のランダムな数
+`}
+    execLanguage={ExecLanguage.PHP}
+    file_name={"string_number_functions.php"}
+/>
+
+## 5. 関数とクラス
+
+次に関数を自分で定義して使ってみましょう！
+この例では、消費税を計算する関数ですね！
+
+関数を使うことで**処理をわかりやすく抽象化、共通化**することが可能です。
+
+<CodeExecutor
+    initialCode={`<?php
+// 関数の定義
+function calculateTax($price, $taxRate = 0.1) {
+    return $price * (1 + $taxRate);
+}
+
+// 関数の使用
+$price = 1000;
+echo calculateTax($price) . "\\n";  // 1100
+echo calculateTax($price, 0.08);  // 1080
+`}
+    execLanguage={ExecLanguage.PHP}
+    file_name={"tax_calculator.php"}
+/>
+
+最後に、オブジェクト指向プログラミングの花形とも言える「クラス」について見ていきましょう。
+
+クラスを使用することで、データと処理を一元管理でき、コードの可読性が向上するなど、プログラミングをより効率的に行うことができます。
+
+例えば、商品の情報を管理するクラスを作ってみましょう。
+
+<CodeExecutor
+    initialCode={`<?php
+class Product {
+    // プロパティ
+    private $name;
+    private $price;
+
+    // コンストラクタ
+    public function __construct($name, $price) {
+        $this->name = $name;
+        $this->price = $price;
+    }
+
+    // メソッド
+    public function getInfo() {
+        return "{$this->name}は{$this->price}円です\\n";
+    }
+
+    // 税込価格を計算するメソッド
+    public function getPriceWithTax($taxRate = 0.1) {
+        return $this->price * (1 + $taxRate);
+    }
+}
+
+// クラスの使用
+$apple = new Product("りんご", 150);
+echo $apple->getInfo();
+echo "税込価格: " . $apple->getPriceWithTax() . "円";
+`}
+    execLanguage={ExecLanguage.PHP}
+    file_name={"product_class.php"}
+/>
+
+このように書くことで、商品データを簡単に管理できますね！
+実際のプラグイン開発でも、**アイテム**や**プレイヤーデータの管理**によく使われる技術です。
+
+これらの機能を組み合わせることで、より複雑で実用的なプログラムが作れるようになります。
+
+## 終わりに
+
+いかがでしたか？プログラミングって意外と簡単で面白いでしょ！
+よもぎサーバーでは、このPHPを使って一緒に開発してくれる仲間を募集しています！
+
+一緒にPHPを学びながら、サーバーを作っていきませんか？
+
+[Discord Serverはこちらから！](https://discord.gg/twstSJnfyY)
