@@ -25,7 +25,7 @@ sidebar_position: 1
 ### ②利用規約に同意する
 
 1. Discordの #おやくそく-rules チャンネルに移動します
-2. ✅ボタンを押して[利用規約](https://yomogi-server-dev.github.io/guide-docs/docs/category/%E5%88%A9%E7%94%A8%E8%A6%8F%E7%B4%84)に同意します。
+2. ✅ボタンを押して[利用規約](https://docs.ymg24.org/docs/category/%E5%88%A9%E7%94%A8%E8%A6%8F%E7%B4%84)に同意します。
 
 利用規約に同意しない場合、人狼用のVCに参加できません。  
 ✅ボタンを押すことで、Discord上の全てのチャンネルが閲覧できるようになります。

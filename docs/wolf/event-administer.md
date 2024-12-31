@@ -9,7 +9,7 @@ sidebar_position: 4
 > 下にスクロールしてください。次のページに進むことができるボタンがあります。
 
 よもぎサーバーに参加すると、マインクラフト統合版を所持している方であれば誰でも無料でマイクラ人狼イベントに参加することができます。
-参加方法については、[こちらの参加方法について解説したページ](https://yomogi-server-dev.github.io/guide-docs/docs/wolf/how-to-join)をご覧ください。
+参加方法については、[こちらの参加方法について解説したページ](https://docs.ymg24.org/docs/wolf/how-to-join)をご覧ください。
 
 ### イベントは、毎週土曜日の21:30から行っています
 
@@ -24,7 +24,7 @@ sidebar_position: 4
 ### イベント開催時以外は、マイクラ人狼は遊べません
 
 現在のところ、イベント開催時以外(主催者がいるとき以外)は人狼ゲームでは遊べません。  
-ただし、[MinecraftとDiscordの連携](https://yomogi-server-dev.github.io/guide-docs/docs/wolf/how-to-join#minecraftとdiscordを連携する)はイベント時間外でも行えます。
+ただし、[MinecraftとDiscordの連携](https://docs.ymg24.org/docs/wolf/how-to-join#minecraft%E3%81%A8discord%E3%82%92%E9%80%A3%E6%90%BA%E3%81%99%E3%82%8B)はイベント時間外でも行えます。
 
 ### このサーバーでは、2種類のマイクラ人狼イベントを開催しています
 
