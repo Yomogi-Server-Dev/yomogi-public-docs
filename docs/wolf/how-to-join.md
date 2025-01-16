@@ -58,7 +58,7 @@ sidebar_position: 1
 
 :::caution 注意
 - 「サーバーを追加」ボタンが存在しない場合は[こちらのよくある質問のページ](https://docs.ymg24.org/docs/wolf/faq)の下部にある「Nintendo Switchでも参加できますか？」「PS4/PS5でも参加できますか？」の項目をご覧になり、サーバーを追加してください
-- 追加が終了しましたら、サーバーに参加になり、10へお進みください。
+- 追加が終了しましたら、サーバーに参加になり、10へお進みください
 :::
 
 ![how-to-linkage-3](./img/linkage_3.png)
@@ -75,7 +75,7 @@ sidebar_position: 1
 10. 画面に表示される連携コードを確認します
 
 :::caution 注意
-- 連携コードが見れない場合は、[こちらのよくある質問のページ](https://docs.ymg24.org/docs/wolf/faq)をご覧ください。
+- 連携コードが見れない場合は、[こちらのよくある質問のページ](https://docs.ymg24.org/docs/wolf/faq)をご覧ください
 :::
 
 ![how-to-linkage-6](./img/linkage_6.png)
