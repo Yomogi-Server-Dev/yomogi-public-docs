@@ -37,3 +37,8 @@ programming:
   label: Programing
   permalink: /programming
   description: プログラミング関係
+
+nannka:
+  label: aaa
+  permalink: /null
+  description: test
