@@ -19,6 +19,7 @@ sidebar_position: 1
 | /landgive `<土地番号｜here>` `<譲渡先の名前>` | 土地譲渡 | 土地所有者 | |
 | /landinfo `<土地番号｜here>` | 土地情報を取得 | 全員　| |
 | /landperm `<土地番号｜here>` `[PermissionName: String]`  `[value: boolean]` | 土地権限を確認または変更 | 土地所有者 |  |
+| /landlist | 自身が所有する土地の一覧を表示 | 全員 | |
 
 ## 土地の値段
 
