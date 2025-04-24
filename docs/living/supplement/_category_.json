@@ -1,0 +1,8 @@
+{
+    "label": "補足資料",
+    "position": 4,
+    "link": {
+        "type": "generated-index",
+        "description": "生活サーバーの詳細な仕様や補足的な部分を説明します。必要に応じてご覧ください。"
+    }
+}
