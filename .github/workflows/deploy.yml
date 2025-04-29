@@ -65,7 +65,7 @@ jobs:
               screen -X -S $session quit || true
             done
             # 既存のプロジェクトを削除
-            rm -rf /home/web/public-docs/*
+            rm -rf /public-docs/*
 
       # デプロイ
       - name: Deploy to Home Server
@@ -76,7 +76,7 @@ jobs:
           port: ${{ secrets.SERVER_SSH_PORT }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           source: "build/"
-          target: "/home/web/public-docs/"
+          target: "/public-docs/"
 
       # 新しいscreen sessionでサービス起動
       - name: Start Service
@@ -87,7 +87,7 @@ jobs:
           port: ${{ secrets.SERVER_SSH_PORT }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            cd /home/web/public-docs/build
+            cd /public-docs/build
             # ローカルにserveをインストール
             npm install serve
             # screenセッションで静的ファイルサーバーを起動
