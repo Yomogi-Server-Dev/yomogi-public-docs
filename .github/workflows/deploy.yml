@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: "18.x"
+          node-version: "22.x"
       - name: Test Build
         run: |
           if [ -e yarn.lock ]; then
@@ -29,7 +29,6 @@ jobs:
             npm i
           fi
           npm run build
-        working-directory: ${{env.SOURCE_FOLDER}}
 
   deploy:
     if: github.event_name != 'pull_request'
@@ -49,25 +48,7 @@ jobs:
             npm i
           fi
           npm run build
-        working-directory: ${{env.SOURCE_FOLDER}}
 
-      # クリーンアップと再起動
-      - name: Cleanup and Prepare
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USERNAME }}
-          port: ${{ secrets.SERVER_SSH_PORT }}
-          key: ${{ secrets.SERVER_SSH_KEY }}
-          script: |
-            # すべての dev-public-docs セッションを終了
-            for session in $(screen -ls | grep public-docs | awk '{print $1}'); do
-              screen -X -S $session quit || true
-            done
-            # 既存のプロジェクトを削除
-            rm -rf /public-docs/*
-
-      # デプロイ
       - name: Deploy to Home Server
         uses: appleboy/scp-action@master
         with:
@@ -76,9 +57,9 @@ jobs:
           port: ${{ secrets.SERVER_SSH_PORT }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           source: "build/"
-          target: "/public-docs/"
+          target: "/web/yomogi-public-docs/build/"
+          rm: true
 
-      # 新しいscreen sessionでサービス起動
       - name: Start Service
         uses: appleboy/ssh-action@master
         with:
@@ -86,9 +67,4 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           port: ${{ secrets.SERVER_SSH_PORT }}
           key: ${{ secrets.SERVER_SSH_KEY }}
-          script: |
-            cd /public-docs/build
-            # ローカルにserveをインストール
-            npm install serve
-            # screenセッションで静的ファイルサーバーを起動
-            screen -dmS public-docs npx serve -s . -l 28100
+          script: "systemctl restart public-docs"
