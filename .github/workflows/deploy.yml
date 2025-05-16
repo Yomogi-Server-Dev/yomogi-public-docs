@@ -57,7 +57,7 @@ jobs:
           port: ${{ secrets.SERVER_SSH_PORT }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           source: "build/"
-          target: "/web/yomogi-public-docs/build/"
+          target: "~/web/yomogi-public-docs/build/"
           rm: true
 
       - name: Start Service
