@@ -67,4 +67,4 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           port: ${{ secrets.SERVER_SSH_PORT }}
           key: ${{ secrets.SERVER_SSH_KEY }}
-          script: "systemctl restart  yomogi-public-docs.service"
+          script: "sudo systemctl restart  yomogi-public-docs.service"
