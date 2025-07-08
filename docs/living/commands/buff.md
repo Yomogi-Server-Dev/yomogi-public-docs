@@ -32,4 +32,4 @@ lobbyなどの一部のワールドでは、エフェクトのレンタルが行
 
 エフェクトのレンタルを終了する場合は、/buffでエフェクトをオフにするかサーバーから退出してください。
 
-![buff-form](./img/yomogi_elevator.png)
+![buff-form](./img/buff.png)
