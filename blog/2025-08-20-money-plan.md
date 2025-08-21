@@ -1,4 +1,4 @@
-<img width="1015" height="348" alt="image" src="https://github.com/user-attachments/assets/8bc46e8c-c7cc-40c0-9098-382cc02b1728" />---
+---
 slug: money-plan
 title: ブランチマイニング金策のやり方
 authors: [Ragazzo]
