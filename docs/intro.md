@@ -22,5 +22,5 @@ Welcome to **YOMOGI Server**！(以下、「よもぎ鯖」と表記)
 よもぎサーバーでは、「生活サーバー」「マイクラ人狼イベント」の2種類のサービスを提供しています。  
 それぞれの詳細は、
 https://docs.ymg24.org/docs/category/生活サーバー  
-https://docs.ymg24.org/docs/category/マイクラ人狼イベント  
+https://docs.ymg24.org/docs/category/マイクラ人狼  
 でご覧いただけます。
