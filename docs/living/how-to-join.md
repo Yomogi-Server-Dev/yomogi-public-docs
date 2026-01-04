@@ -64,7 +64,7 @@ sidebar_position: 1
 :::caution 注意
 - 「サーバーを追加」ボタンが存在しない場合は[こちらのよくある質問のページ](https://docs.ymg24.org/docs/wolf/faq)の下部にある「Nintendo Switchでも参加できますか？」「PS4/PS5でも参加できますか？」の項目をご覧になり、サーバーを追加してください
 - 追加が終了しましたら、サーバーに参加になり、10へお進みください
-  :::
+:::
 
 ![how-to-linkage-3](./img/linkage_3.png)
 
@@ -81,7 +81,7 @@ sidebar_position: 1
 
 :::caution 注意
 - 連携コードが見れない場合は、[こちらのよくある質問のページ](https://docs.ymg24.org/docs/wolf/faq)をご覧ください
-  :::
+:::
 
 ![how-to-linkage-6](./img/linkage_6.png)
 
@@ -91,7 +91,7 @@ sidebar_position: 1
 - 1!とauthと連携コードの間に、それぞれ半角スペースが必要です
 - 連携コードは、半角数字か半角英語の小文字です。数字のゼロ(0)とイチ(1)はありますが、アルファベットのエル(l)とオー(o)はありません
 - 連携コードを忘れた場合は、再度マインクラフトサーバーに参加することで確認できます
-  :::
+:::
 
 ![how-to-linkage-7](./img/linkage_7.png)
 
@@ -101,11 +101,11 @@ https://vc.ymg24.org/?serverId=1 を利用して近距離VCに参加してくだ
 
 :::caution 注意
 - 近距離VCに参加できない場合は、[こちらのよくある質問のページ](https://docs.ymg24.org/docs/living/faq/lvc-faults)をご覧ください
-  :::
+:::
 
 :::note
 近距離VCについての詳細は https://docs.ymg24.org/docs/living/commands/limited-vc でご覧になれます。
-  :::
+:::
 
 ### ⑤生活サーバーに参加する
 
