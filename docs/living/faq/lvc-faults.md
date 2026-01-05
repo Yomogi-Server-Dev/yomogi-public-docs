@@ -7,7 +7,8 @@ sidebar_position: 2
 
 ### 接続時に「Minecraftのゲーマータグの取得に失敗しました: 先にDiscordとMinecraftをよもぎサーバーDiscord内で連携してから、ここまでの操作をやり直してください (エラーコード: 201)」と出る場合
 
-https://www.youtube.com/watch?v=y3i-PsExNd0 をご覧になり、DiscordアカウントとMicrosoftアカウントの連携を行ってください。  
+まず、よもぎサーバーのDiscordに参加していない場合は[こちらの招待リンク](https://discord.gg/5Ck73dDgHs )を利用してDiscordサーバーに参加してください。  
+次に、 https://www.youtube.com/watch?v=y3i-PsExNd0 をご覧になり、DiscordアカウントとMicrosoftアカウントの連携を行ってください。  
 連携を行っているにもかかわらずこのメッセージが表示される場合は、近距離VCの参加時に認証したDiscordアカウントと連携に使用したDiscordアカウントとが異なっている可能性がありますので、近距離VC画面の右上をクリックし、「ログアウト」を選択して正しいアカウントで再認証を行ってください。  
 
 ### 接続時に「Banまたはタイムアウトにより参加できません 理由:... (エラーコード: 203)」と出る場合
