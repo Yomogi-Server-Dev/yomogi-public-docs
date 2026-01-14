@@ -103,4 +103,5 @@ https://docs.ymg24.org/docs/living/faq/device　をご覧ください。
 
 #### 「近距離VC https://vc.ymg24.org に参加してください」と出る場合
 
-近距離VCに参加してください。何らかの問題が発生して参加ができない場合は、 https://docs.ymg24.org/docs/living/faq/lvc-faults をご覧ください。
+近距離VCに参加してください。何らかの問題が発生して参加ができない場合は、 https://docs.ymg24.org/docs/living/faq/lvc-faults をご覧ください。  
+ただし、連携コードを確認するためにサーバーに参加した場合は、サーバーアドレスの設定を「ymg24.org」から「ymgs.f5.si」に変更してください。  
