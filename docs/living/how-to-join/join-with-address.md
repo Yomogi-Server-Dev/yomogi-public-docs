@@ -30,7 +30,8 @@ sidebar_position: 1
 :::caution 注意
 Nintendo Switchの方は「サーバーを追加」ボタンがありません。  
 サーバーの追加方法については https://docs.ymg24.org/docs/living/faq/device をご覧ください。
-  :::
+
+:::
 
 ![サーバーを追加ボタンの位置を示したスクリーンショット](../img/how_to_join_1.png)
 
@@ -43,4 +44,5 @@ Nintendo Switchの方は「サーバーを追加」ボタンがありません�
 
 :::caution 注意
 サーバーに参加できない場合は https://docs.ymg24.org/docs/living/faq/joining-faults をご覧ください。
-  :::
+
+:::
