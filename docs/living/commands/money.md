@@ -35,7 +35,7 @@ sidebar_position: 6
 
 ## コマンド
 
-| command | 説明 | 権限 |
+| コマンド | 説明 | 権限 |
 |---|---|---|
 | `/mymoney` | 自分の所持金を表示する | 全員 |
 | `/pay <プレイヤー名> <金額>` | 相手に送金する | 全員 |
@@ -48,10 +48,10 @@ sidebar_position: 6
 | 方法 | 説明 |
 |---|---|
 | 役職の採掘報酬 | 自分の役職に合ったブロックを壊すとYGがもらえます([役職制度](https://docs.ymg24.org/docs/living/commands/role)) |
-| アイテムを売る | 公式ショップの売却や、[チェストショップ](https://docs.ymg24.org/docs/living/commands/chest-shop)での販売 |
-| レベルアップ報酬 | 採掘・農業・釣りのレベルが上がるとYGがもらえます |
-| ミッション | ミッションを達成すると賞金がもらえます |
-| 仕事を受ける | [求人・仕事依頼](https://docs.ymg24.org/docs/living/commands/jobboard)や会社の給料 |
+| アイテムを売る | [公式ショップ](https://docs.ymg24.org/docs/living/commands/shop)での売却や、[チェストショップ](https://docs.ymg24.org/docs/living/commands/chest-shop)での販売 |
+| レベルアップ報酬 | 採掘・農業・釣りの[レベル](https://docs.ymg24.org/docs/living/commands/levels)が上がるとYGがもらえます |
+| ミッション | [ミッション](https://docs.ymg24.org/docs/living/commands/mission)を達成すると賞金がもらえます |
+| 仕事を受ける | [求人・仕事依頼](https://docs.ymg24.org/docs/living/commands/jobboard)や、[会社](https://docs.ymg24.org/docs/living/commands/company)からの給料 |
 
 :::tip 最低販売価格に注意
 鉄・ダイヤモンド・小麦とそれらを材料にしたアイテムには、売買してよい価格の下限(最低販売価格)が決められています。詳しくは[最低販売価格のページ](https://docs.ymg24.org/docs/living/supplement/minimum-price)をご覧ください。

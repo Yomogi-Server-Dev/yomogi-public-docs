@@ -23,30 +23,29 @@ sidebar_position: 2
 
 ## Minecraftサーバーに参加する
 
-➀ Minecraftの統合版を起動し、「プレイ」をクリックします  
-② 画面右上の「ソーシャル」をクリックします  
+① Minecraftの統合版を起動し、「プレイ」をクリックします  
+② 画面右上の「ソーシャル」をクリックします
 
 ![ソーシャルボタンの位置を示したスクリーンショット](../img/how_to_join_friend_1.png)
 
-③ 「人物検索」をクリックします  
+③ 「人物検索」をクリックします
 
 ![人物検索の位置を示したスクリーンショット](../img/how_to_join_friend_2.png)
 
-③ 入力欄に「ymg24mc」と入力します  
-④ 検索結果右側の「追加」をクリックします  
+④ 入力欄に「ymg24mc」と入力します  
+⑤ 検索結果の右側にある「追加」をクリックします
 
 ![ymg24mcの検索方法を示したスクリーンショット](../img/how_to_join_friend_3.png)
 
-⑤ Minecraftを再起動し、2分ほど待機します  
-⑥ ワールド一覧に表示されている「よもぎサーバー」を選択します　　
+⑥ Minecraftを再起動し、2分ほど待ちます  
+⑦ ワールド一覧に表示されている「よもぎサーバー」を選択します
 
 ![よもぎサーバーの選択方法を示したスクリーンショット](../img/how_to_join_friend_4.png)
 
 :::caution 注意
-サーバーに参加できない場合は https://docs.ymg24.org/docs/living/faq/joining-faults をご覧いただくか、[サーバーアドレスによる参加](https://docs.ymg24.org/docs/living/how-to-join/join-with-address)をご検討ください。
-
+サーバーに参加できない場合は[Minecraftの生活サーバーに参加できません](https://docs.ymg24.org/docs/living/faq/joining-faults)をご覧いただくか、[サーバーアドレスによる参加](https://docs.ymg24.org/docs/living/how-to-join/join-with-address)をご検討ください。
 :::
 
-⑦ 「生活サーバー」を選択します　　
+⑧ 「生活サーバー」を選択します
 
 ![生活サーバーの選択方法を示したスクリーンショット](../img/how_to_join_friend_5.png)
