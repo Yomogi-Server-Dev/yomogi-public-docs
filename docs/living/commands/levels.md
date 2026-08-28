@@ -1,5 +1,5 @@
 ---
-sidebar_position: 19
+sidebar_position: 21
 ---
 
 # レベル(採掘・農業・釣り)
