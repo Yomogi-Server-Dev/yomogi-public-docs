@@ -7,6 +7,12 @@ const config: Config = {
     tagline: 'Dinosaurs are cool',
     favicon: 'img/favicon.ico',
 
+    markdown: {
+        mermaid: true,
+    },
+
+    themes: ['@docusaurus/theme-mermaid'],
+
     url: 'https://docs.ymg24.org/',
     baseUrl: '/',
 
