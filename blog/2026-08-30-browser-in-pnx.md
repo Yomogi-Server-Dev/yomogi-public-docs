@@ -19,8 +19,6 @@ tags: [developments, programming]
 じゃーん。   
 ![マイクラ内の地図に表示した阿部寛のホームページ](./img/260830/1.png)
 
-続きは、下部の「もっと見る」をクリック！！ ↓
-
 <!-- truncate -->
 
 (権利関係が怖いので、モザイクかけました。ひよった。。。)  
@@ -232,7 +230,7 @@ BrowserServiceはsessionごとに1つの `BrowserContext` と `Page` を作り�
 - `browser.click`：指定した座標をクリック
 - `browser.back` / `browser.forward`：戻る・進む
 - `browser.reload`：再読み込み
-- `browser.scroll`：指定量だけスクロール(Minecraft内で完結する操作UIはまだ作ってない。作りたい！)
+- `browser.scroll`：スクロール(まだモックしか実装してない。したい！)
 
 すべてのrequestには `requestId` を付けます。  
 BrowserServiceからのresponseにも同じIDを付けて、  
@@ -921,7 +919,7 @@ scroll、許可されたpopup遷移等の操作後です。
 
 現時点では、次の制限があります。  
 
-- スクロールはコマンド操作のみで、額縁への操作だけで完結するUIは未対応
+- 完全なスクロール機能は未対応
 - 音声、WebRTC、DRM、高FPS動画転送には未対応
 - マイクラ内の完全なkeyboard UIや文字入力は未対応
 - downloadは常にcancel、file uploadも未対応
@@ -953,7 +951,7 @@ SSRF防御を弱める設定なので、これもシステム・ユーザの責�
 高FPS動画を目指すのではなく、statusや案内板の内容が変わったときだけ  
 低頻度で更新する方向なら、マイクラの地図と相性がよさそうです。  
 
-最後に開いたURLの永続化、権限管理、額縁への操作だけで完結するscroll操作、  
+最後に開いたURLの永続化、権限管理、額縁への操作だけで完結するスクロール操作、  
 tile内の変更領域まで考えた更新等、MVPの先に試せることはまだあります。  
 
 ただ、前項の「現在の制限」含め、実装できる見込みは立っているので  
