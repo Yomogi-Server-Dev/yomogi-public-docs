@@ -19,6 +19,7 @@ tags: [developments, programming]
 じゃーん。   
 ![マイクラ内の地図に表示した阿部寛のホームページ](./img/260830/1.png)
 
+続きは、下部の「もっと見る」をクリック！！ ↓
 
 <!-- truncate -->
 
