@@ -897,7 +897,6 @@ PNGがPNXへ届き、40枚の地図へ分割されて表示されます。
 - 右click：Webページを右click
 - Sneak + 左click：戻る
 - Sneak + 右click：進む
-- `/browser scroll <display> <deltaY> [deltaX]`：コマンドからスクロール
 
 ページ内の画面が切り替わるリンクも、問題なく動く。  
 
