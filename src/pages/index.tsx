@@ -5,6 +5,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import ServerFeatureIndex from '@site/src/components/ServerFeatureIndex';
 
 import styles from './index.module.css';
 
@@ -89,6 +90,7 @@ export default function Home(): ReactNode {
             <HomepageHeader />
             <main>
                 <HomepageFeatures />
+                <ServerFeatureIndex />
                 <WolfHighlight />
             </main>
         </Layout>
