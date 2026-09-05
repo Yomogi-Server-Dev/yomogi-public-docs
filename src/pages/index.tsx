@@ -4,7 +4,6 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import ServerFeatureIndex from '@site/src/components/ServerFeatureIndex';
 
 import styles from './index.module.css';
@@ -89,7 +88,6 @@ export default function Home(): ReactNode {
             description="よもぎサーバー(YOMOGI Server) 公式ガイド。生活・経済サーバーとマイクラ人狼イベントの遊び方をご案内します。">
             <HomepageHeader />
             <main>
-                <HomepageFeatures />
                 <ServerFeatureIndex />
                 <WolfHighlight />
             </main>
