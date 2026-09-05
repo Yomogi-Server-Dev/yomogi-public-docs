@@ -23,26 +23,24 @@ sidebar_position: 1
 
 ## Minecraftサーバーに参加する
 
-➀ Minecraftの統合版を起動し、「プレイ」をクリックします  
-②「サーバー」をクリックします  
+① Minecraftの統合版を起動し、「プレイ」をクリックします  
+② 「サーバー」をクリックします  
 ③ 画面左上の「サーバーを追加」をクリックします
 
 :::caution 注意
 Nintendo Switchの方は「サーバーを追加」ボタンがありません。  
-サーバーの追加方法については https://docs.ymg24.org/docs/living/faq/device をご覧ください。
-
+サーバーの追加方法については[PC/スマートフォン以外のデバイスからでも参加できますか？](https://docs.ymg24.org/docs/living/faq/device)をご覧ください。
 :::
 
 ![サーバーを追加ボタンの位置を示したスクリーンショット](../img/how_to_join_1.png)
 
-④ サーバー名に好きなサーバー名を、サーバーアドレスに「ymg24.org」、ポートに「19132」と入力してください。  
+④ サーバー名に好きな名前を、サーバーアドレスに「ymg24.org」、ポートに「19132」と入力します
 
 ![サーバー追加欄に入力すべき項目が書かれたスクリーンショット](../img/how_to_join_2.png)
 
 ⑤ 「追加してプレイ」をクリックします  
-⑥ サーバーに参加できます　　
+⑥ サーバーに参加できます
 
 :::caution 注意
-サーバーに参加できない場合は https://docs.ymg24.org/docs/living/faq/joining-faults をご覧ください。
-
+サーバーに参加できない場合は[Minecraftの生活サーバーに参加できません](https://docs.ymg24.org/docs/living/faq/joining-faults)をご覧ください。
 :::
