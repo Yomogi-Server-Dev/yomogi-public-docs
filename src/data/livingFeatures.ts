@@ -33,6 +33,7 @@ export const livingFeatureCategories: LivingFeatureCategory[] = [
             {slug: 'tradingboard', title: '出店掲示板', emoji: '📋'},
             {slug: 'trade', title: 'プレイヤー間取引', emoji: '🤝'},
             {slug: 'auction', title: 'オークション', emoji: '🔨'},
+            {slug: 'sellfish', title: '釣果の売却', emoji: '💵'},
         ],
     },
     {
@@ -51,6 +52,7 @@ export const livingFeatureCategories: LivingFeatureCategory[] = [
             {slug: 'mission', title: 'ミッション', emoji: '📜'},
             {slug: 'rank', title: '称号プラグイン', emoji: '🏆'},
             {slug: 'profile', title: 'プロフィール', emoji: '🪪'},
+            {slug: 'vote', title: '投票報酬', emoji: '🗳️'},
         ],
     },
     {
@@ -67,10 +69,13 @@ export const livingFeatureCategories: LivingFeatureCategory[] = [
             {slug: 'fishing', title: '釣り', emoji: '🎣'},
             {slug: 'enchant', title: 'エンチャント', emoji: '✨'},
             {slug: 'gacha', title: 'ガチャ', emoji: '🎰'},
+            {slug: 'item-gacha', title: 'アイテム交換ガチャ', emoji: '🎟️'},
             {slug: 'casino', title: 'カジノ', emoji: '♠️'},
             {slug: 'vehicles', title: '車(乗り物)', emoji: '🚗'},
             {slug: 'island', title: '島プラグイン', emoji: '🏝️'},
             {slug: 'buff', title: 'エフェクトのレンタル', emoji: '🧪'},
+            {slug: 'exp-speed-boots', title: '経験値で動くバフ防具', emoji: '👢'},
+            {slug: 'athletic', title: 'アスレチック', emoji: '🏃'},
         ],
     },
     {
