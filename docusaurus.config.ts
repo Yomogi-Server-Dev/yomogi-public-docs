@@ -99,10 +99,53 @@ const config: Config = {
                 highlightSearchTermsOnTargetPage: true,
             },
         ],
+        // 画像をタップして拡大表示できるようにする。スクリーンショットが多いこのサイトでは
+        // 小さい文字や細部を確認したい場面が多いため導入した。
+        [
+            'docusaurus-plugin-image-zoom',
+            {},
+        ],
+        // ページを移動・改名した際に、旧URLから新URLへ自動でリダイレクトする。
+        // 過去のwolf_recategorize(faq/how-to-joinの分割)を確認したところ、現時点で
+        // 実際に壊れているURLは無かったが、今後また構成を変える際の保険として先に導入しておく。
+        [
+            '@docusaurus/plugin-client-redirects',
+            {
+                redirects: [],
+            },
+        ],
+        // スマホのホーム画面に追加してアプリのように開けるようにし(PWA化)、
+        // 一度表示したページはオフラインでも見られるようにする。
+        [
+            '@docusaurus/plugin-pwa',
+            {
+                debug: false,
+                offlineModeActivationStrategies: ['appInstalled', 'standalone', 'queryString'],
+                pwaHead: [
+                    {tagName: 'link', rel: 'icon', href: '/img/icon-192.png'},
+                    {tagName: 'link', rel: 'manifest', href: '/manifest.json'},
+                    {tagName: 'meta', name: 'theme-color', content: '#2f9e44'},
+                    {tagName: 'meta', name: 'apple-mobile-web-app-capable', content: 'yes'},
+                    {tagName: 'meta', name: 'apple-mobile-web-app-status-bar-style', content: '#2f9e44'},
+                    {tagName: 'link', rel: 'apple-touch-icon', href: '/img/icon-180.png'},
+                    {tagName: 'link', rel: 'mask-icon', href: '/img/icon-maskable-512.png', color: '#2f9e44'},
+                ],
+            },
+        ],
     ],
 
     themeConfig: {
         image: 'img/social-card.jpg',
+        zoom: {
+            selector: '.markdown img',
+            background: {
+                light: 'rgb(255, 255, 255)',
+                dark: 'rgb(35, 35, 35)',
+            },
+            config: {
+                margin: 24,
+            },
+        },
         navbar: {
             title: 'Yomogi Server Guide',
             hideOnScroll: true,
