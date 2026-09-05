@@ -1,0 +1,107 @@
+.heroBanner {
+    padding: 5rem 0 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, var(--ifm-color-emphasis-100) 0%, var(--ifm-background-color) 100%);
+}
+
+/* 画像素材が無いため、CSSだけで柔らかいグラデーションの"ぼかし玉"を
+   2つ配置して奥行きを出す(参考サイトのヒーロー背景でよく使われる手法)。
+   pointer-events: noneでクリック等の操作を一切妨げないようにしている。 */
+.heroBanner::before,
+.heroBanner::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.heroBanner::before {
+    width: 420px;
+    height: 420px;
+    top: -180px;
+    left: -120px;
+    background: color-mix(in srgb, var(--ifm-color-primary) 35%, transparent);
+}
+
+.heroBanner::after {
+    width: 360px;
+    height: 360px;
+    bottom: -160px;
+    right: -100px;
+    background: color-mix(in srgb, var(--ifm-color-primary-light) 30%, transparent);
+}
+
+.heroBanner .container {
+    position: relative;
+    z-index: 1;
+}
+
+.heroDescription {
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    font-size: 1.05rem;
+    color: var(--ifm-color-emphasis-800);
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+}
+
+.statsBar {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.statPill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.15rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--ifm-card-border-radius);
+    background: var(--ifm-background-surface-color);
+    border: 1px solid var(--ifm-color-emphasis-200);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    min-width: 110px;
+}
+
+.statNumber {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--ifm-color-primary);
+    line-height: 1.2;
+}
+
+.statLabel {
+    font-size: 0.8rem;
+    color: var(--ifm-color-emphasis-700);
+}
+
+.wolfSection {
+    padding: 0 0 3rem;
+}
+
+.wolfCard {
+    max-width: 860px;
+    margin: 0 auto;
+    border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+@media screen and (max-width: 480px) {
+    .heroBanner {
+        padding: 2rem 1rem;
+    }
+}

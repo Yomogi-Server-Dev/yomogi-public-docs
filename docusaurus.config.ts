@@ -7,6 +7,16 @@ const config: Config = {
     tagline: 'よもぎサーバー 公式ガイド・攻略Wiki',
     favicon: 'img/favicon.ico',
 
+    // 見出し・本文の書体をNoto Sans JPへ統一する(custom.cssの--ifm-font-family-baseと対応)。
+    // OS既定フォントのみだと見出しの主張が弱く、参考にしたサイトのような
+    // "作り込まれた"印象が出にくかったため導入した。
+    stylesheets: [
+        {
+            href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap',
+            type: 'text/css',
+        },
+    ],
+
     markdown: {
         mermaid: true,
     },
@@ -95,6 +105,7 @@ const config: Config = {
         image: 'img/social-card.jpg',
         navbar: {
             title: 'Yomogi Server Guide',
+            hideOnScroll: true,
             logo: {
                 alt: 'Yomogi Server Guide Logo',
                 src: 'img/yomogi4.png',
