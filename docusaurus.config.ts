@@ -118,7 +118,7 @@ const config: Config = {
                     label: 'マイクラ人狼',
                 },
                 {to: '/blog', label: 'Blog', position: 'left'},
-                {to: '/docs/inquiry/inquiry', label: 'お問い合わせ', position: 'right'},
+                {to: '/docs/inquiry', label: 'お問い合わせ', position: 'right'},
                 {
                     href: 'https://github.com/Yomogi-Server-Dev/yomogi-public-docs',
                     label: 'GitHub',
@@ -146,7 +146,7 @@ const config: Config = {
                         },
                         {
                             label: 'お問い合わせ',
-                            to: '/docs/inquiry/inquiry',
+                            to: '/docs/inquiry',
                         },
                     ],
                 },
