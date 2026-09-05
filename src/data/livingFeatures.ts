@@ -69,7 +69,6 @@ export const livingFeatureCategories: LivingFeatureCategory[] = [
             {slug: 'fishing', title: '釣り', emoji: '🎣'},
             {slug: 'enchant', title: 'エンチャント', emoji: '✨'},
             {slug: 'gacha', title: 'ガチャ', emoji: '🎰'},
-            {slug: 'item-gacha', title: 'アイテム交換ガチャ', emoji: '🎟️'},
             {slug: 'casino', title: 'カジノ', emoji: '♠️'},
             {slug: 'vehicles', title: '車(乗り物)', emoji: '🚗'},
             {slug: 'island', title: '島プラグイン', emoji: '🏝️'},
