@@ -4,7 +4,9 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
-import ServerFeatureIndex from '@site/src/components/ServerFeatureIndex';
+import FeatureIndex from '@site/src/components/FeatureIndex';
+import {livingFeatureCategories} from '@site/src/data/livingFeatures';
+import {wolfFeatureCategories} from '@site/src/data/wolfFeatures';
 
 import styles from './index.module.css';
 
@@ -88,8 +90,17 @@ export default function Home(): ReactNode {
             description="よもぎサーバー(YOMOGI Server) 公式ガイド。生活・経済サーバーとマイクラ人狼イベントの遊び方をご案内します。">
             <HomepageHeader />
             <main>
-                <ServerFeatureIndex />
+                <FeatureIndex
+                    title="🗺️ 生活サーバーの全機能"
+                    lead="気になる項目をタップすると、詳しい使い方のページに移動します。"
+                    categories={livingFeatureCategories}
+                />
                 <WolfHighlight />
+                <FeatureIndex
+                    title="🐺 マイクラ人狼の全機能"
+                    lead="気になる項目をタップすると、詳しい使い方のページに移動します。"
+                    categories={wolfFeatureCategories}
+                />
             </main>
         </Layout>
     );
