@@ -22,7 +22,16 @@ jobs:
           port: ${{ secrets.SERVER_SSH_PORT }}
           script: |
             cd /home/living/website/docs/
-            git pull origin main
+            # 以前は `git pull origin main` だったが、サーバー上で npm install した際に
+            # package-lock.json がコミット時と微妙に異なる内容へ書き換わり、
+            # ローカル差分としてpullを毎回ブロックしていた(「Aborting」で失敗)。
+            # 失敗してもこのステップ自体は後続コマンドの結果で成功扱いになるため、
+            # ビルド・pm2再起動は毎回「古いソースのまま」実行され、デプロイが
+            # 成功したように見えて実際には反映されていない状態が続いていた。
+            # デプロイ先はビルド専用のチェックアウトでローカル変更を保持する必要が
+            # 無いため、常にリポジトリの状態へ強制的に合わせる方式に変更する。
+            git fetch origin main
+            git reset --hard origin/main
             npm install
             npm run build
             pm2 restart docusaurus-docs
