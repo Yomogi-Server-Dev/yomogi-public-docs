@@ -98,6 +98,49 @@
     max-width: 860px;
     margin: 0 auto;
     border: 1px solid var(--ifm-color-emphasis-200);
+    border-left: 4px solid var(--wolf-accent);
+}
+
+.wolfButton {
+    border: 2px solid var(--wolf-accent);
+    color: var(--wolf-accent) !important;
+    background: transparent;
+}
+
+.wolfButton:hover {
+    background: color-mix(in srgb, var(--wolf-accent) 12%, transparent);
+    text-decoration: none;
+}
+
+.quickNav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.75rem;
+    flex-wrap: wrap;
+    margin-top: 1.75rem;
+}
+
+.quickNavLink {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--ifm-color-primary);
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.15s ease;
+}
+
+.quickNavLink:hover {
+    border-bottom-color: var(--ifm-color-primary);
+    text-decoration: none;
+}
+
+.quickNavLinkWolf {
+    color: var(--wolf-accent);
+}
+
+.quickNavLinkWolf:hover {
+    border-bottom-color: var(--wolf-accent);
 }
 
 @media screen and (max-width: 480px) {

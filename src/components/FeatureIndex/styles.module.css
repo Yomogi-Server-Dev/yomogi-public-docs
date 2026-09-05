@@ -1,5 +1,21 @@
 .section {
-    padding: 1rem 0 4rem;
+    padding: 3rem 0 4rem;
+    /* 固定ヘッダーの下にページ内リンクで移動してきた際、見出しが隠れないようにする */
+    scroll-margin-top: calc(var(--ifm-navbar-height) + 0.5rem);
+}
+
+/* 生活/人狼の2セクションを背景でも区切り、境目をひと目でわかるようにする */
+.sectionMuted {
+    background: var(--ifm-color-emphasis-100);
+}
+
+.eyebrow {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--feature-accent, var(--ifm-color-primary));
+    margin-bottom: 0.5rem;
 }
 
 .sectionTitle {
@@ -24,8 +40,8 @@
 .categoryTitle {
     font-size: 1rem;
     font-weight: 700;
-    color: var(--ifm-color-primary);
-    border-left: 4px solid var(--ifm-color-primary);
+    color: var(--feature-accent, var(--ifm-color-primary));
+    border-left: 4px solid var(--feature-accent, var(--ifm-color-primary));
     padding-left: 0.6rem;
     margin-bottom: 1rem;
 }
@@ -54,7 +70,7 @@
 
 .tile:hover {
     transform: translateY(-3px);
-    border-color: var(--ifm-color-primary);
+    border-color: var(--feature-accent, var(--ifm-color-primary));
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
 
