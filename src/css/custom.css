@@ -27,6 +27,10 @@
        トップページ内で「今どちらのサーバーの話をしているか」を色でも
        判別できるようにする。 */
     --wolf-accent: #7c3aed;
+    /* サイドバーの選択中項目を、既定の薄いグレー(--ifm-hover-overlay)ではなく
+       ブランドカラーのほんのり色付きの背景にして、今どこを見ているか
+       ひと目でわかるようにする。 */
+    --ifm-menu-color-background-active: color-mix(in srgb, var(--ifm-color-primary) 14%, transparent);
 }
 
 /* トップページのページ内リンク(quick nav)でスムーズにスクロールさせる */
@@ -127,4 +131,42 @@ h1, h2, h3, .hero__title {
 
 [data-theme='dark'] .pagination-nav__link:hover {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* サイドバー項目にも角丸を付け、選択中/ホバー時の背景が四角い塗りつぶしでは
+   なく、カード類と同じ丸みのあるチップとして見えるようにする */
+.menu__link {
+    border-radius: 6px;
+}
+
+/* ナビゲーションバーに半透明+ぼかしを付け、スクロール後にコンテンツが
+   下に透けて見える"すりガラス"の質感を出す(Vercel/Stripe等のドキュメント
+   サイトでよく使われる) */
+.navbar {
+    background-color: color-mix(in srgb, var(--ifm-navbar-background-color) 90%, transparent);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* ブログ一覧: 既定は記事ごとに<hr>で区切るだけの素朴なリストだったため、
+   トップページ・ドキュメントと統一感のあるカード表示に変更した */
+.blog-list-page article {
+    background: var(--ifm-background-surface-color);
+    border: 1px solid var(--ifm-color-emphasis-200);
+    border-radius: var(--ifm-card-border-radius);
+    padding: 2rem 2rem 1.5rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.blog-list-page article:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='dark'] .blog-list-page article:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+}
+
+.blog-list-page hr {
+    display: none;
 }

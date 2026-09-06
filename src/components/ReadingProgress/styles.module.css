@@ -1,0 +1,15 @@
+.track {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    z-index: 250;
+    pointer-events: none;
+}
+
+.bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--ifm-color-primary), var(--wolf-accent));
+    transition: width 0.1s ease-out;
+}
