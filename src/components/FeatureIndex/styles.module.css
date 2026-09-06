@@ -29,8 +29,20 @@
     margin-bottom: 2.5rem;
 }
 
+/* カテゴリごとに輪郭のあるカードで囲み、項目数が多くても「どこからどこまでが
+   1つのカテゴリか」を一目で判別できるようにする(以前は色付きの見出し文字だけで
+   区切っており、カテゴリ同士の境目が分かりにくかった)。 */
 .categoryBlock {
-    margin-bottom: 2rem;
+    background: var(--ifm-background-surface-color);
+    border: 1px solid var(--ifm-color-emphasis-200);
+    border-radius: var(--ifm-card-border-radius);
+    padding: 1.5rem 1.5rem 1.75rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+}
+
+[data-theme='dark'] .categoryBlock {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 .categoryBlock:last-child {
@@ -38,53 +50,62 @@
 }
 
 .categoryTitle {
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 700;
     color: var(--feature-accent, var(--ifm-color-primary));
     border-left: 4px solid var(--feature-accent, var(--ifm-color-primary));
     padding-left: 0.6rem;
-    margin-bottom: 1rem;
+    margin: 0 0 1.1rem;
 }
 
+/* タイルを横並び(アイコン+左寄せ文字)にすることで、縦積みだった時より
+   文字が折り返しにくく、短い時間で読み取れるようにした。 */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.6rem;
 }
 
 .tile {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    gap: 0.4rem;
-    padding: 1rem 0.75rem;
-    border-radius: var(--ifm-card-border-radius);
+    gap: 0.7rem;
+    padding: 0.75rem 0.9rem;
+    border-radius: calc(var(--ifm-card-border-radius) - 4px);
     border: 1px solid var(--ifm-color-emphasis-200);
-    background: var(--ifm-background-surface-color);
-    text-align: center;
+    background: var(--ifm-color-emphasis-100);
+    text-align: left;
     text-decoration: none !important;
     color: var(--ifm-font-color-base) !important;
-    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
 }
 
 .tile:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     border-color: var(--feature-accent, var(--ifm-color-primary));
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    background: color-mix(in srgb, var(--feature-accent, var(--ifm-color-primary)) 10%, var(--ifm-color-emphasis-100));
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
 }
 
 [data-theme='dark'] .tile:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
 }
 
 .tileEmoji {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     line-height: 1;
+    flex-shrink: 0;
 }
 
 .tileTitle {
-    font-size: 0.85rem;
-    font-weight: 500;
-    line-height: 1.3;
+    font-size: 0.92rem;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+@media screen and (max-width: 480px) {
+    .categoryBlock {
+        padding: 1.1rem 1rem 1.25rem;
+    }
 }
