@@ -67,3 +67,64 @@ h1, h2, h3, .hero__title {
 [data-theme='dark'] .card:hover {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
 }
+
+/* ============================================================
+   ドキュメント本文(トップページ以外の全ページ)の可読性強化
+   Ionic/Jest/Electron等の参考サイトは、本文の区切り・表・画像・
+   ページ送りに手が入っており、素の状態より読み物として追いやすい。
+   InfimaのデフォルトでもTableの縞模様やadmonitionの角丸はすでに
+   良く出来ているため、ここでは「Infimaのデフォルトには無い」部分
+   (見出しの区切り線、画像の見た目、表の角丸、ページ送りの動き)だけを
+   追加する。
+   ============================================================ */
+
+/* 長文の日本語は単語間にスペースが無く詰まって見えやすいため、本文の
+   行間を既定よりわずかに広げて読みやすくする(見出し・表・admonition内は対象外) */
+.markdown > p,
+.markdown li {
+    line-height: 1.85;
+}
+
+/* h2ごとに区切り線を入れ、長いページでも「ここから次の話題」と
+   一目でわかるようにする(既定は見出しの余白だけで区切っていた) */
+.markdown h2 {
+    margin-top: 2.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+/* 表: Infimaの既定(縞模様・ヘッダー網掛け)に角丸とホバー行を足し、
+   カード的な見た目に揃える */
+.markdown table {
+    border-radius: var(--ifm-card-border-radius);
+}
+
+.markdown table tr:hover {
+    background-color: color-mix(in srgb, var(--ifm-color-primary) 8%, transparent);
+}
+
+/* スクリーンショット等の画像に角丸と影を付け、素の画像より
+   スクリーンショットだと分かりやすく、浮いて見えるようにする */
+.markdown img {
+    border-radius: var(--ifm-card-border-radius);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] .markdown img {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* ページ送り(前後の記事)カードにも、トップページのカードと同じ
+   浮き上がりモーションを付けて統一感を出す */
+.pagination-nav__link {
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.pagination-nav__link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='dark'] .pagination-nav__link:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+}

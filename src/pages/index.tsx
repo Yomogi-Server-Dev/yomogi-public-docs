@@ -5,7 +5,6 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 import FeatureIndex from '@site/src/components/FeatureIndex';
-import BackToTop from '@site/src/components/BackToTop';
 import {livingFeatureCategories} from '@site/src/data/livingFeatures';
 import {wolfFeatureCategories} from '@site/src/data/wolfFeatures';
 
@@ -117,7 +116,6 @@ export default function Home(): ReactNode {
                     muted
                 />
             </main>
-            <BackToTop />
         </Layout>
     );
 }
