@@ -78,4 +78,4 @@ sidebar_position: 2
 ## 放置土地の解除
 
 土地の所有者と土地共有を受けた人の全員が1か月以上ログインしていない土地は、自動的に所有権が取り消されます。  
-その土地は運営の審査のあと、[オークション](https://docs.ymg24.org/docs/living/commands/auction)に出品されるか売却されます。
+その土地は運営の審査のあと、[オークション](/docs/living/commands/auction)に出品されるか売却されます。

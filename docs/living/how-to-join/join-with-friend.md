@@ -43,7 +43,7 @@ sidebar_position: 2
 ![よもぎサーバーの選択方法を示したスクリーンショット](../img/how_to_join_friend_4.png)
 
 :::caution 注意
-サーバーに参加できない場合は[Minecraftの生活サーバーに参加できません](https://docs.ymg24.org/docs/living/faq/joining-faults)をご覧いただくか、[サーバーアドレスによる参加](https://docs.ymg24.org/docs/living/how-to-join/join-with-address)をご検討ください。
+サーバーに参加できない場合は[Minecraftの生活サーバーに参加できません](/docs/living/faq/joining-faults)をご覧いただくか、[サーバーアドレスによる参加](/docs/living/how-to-join/join-with-address)をご検討ください。
 :::
 
 ⑧ 「生活サーバー」を選択します

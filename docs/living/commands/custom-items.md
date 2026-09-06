@@ -14,7 +14,7 @@ sidebar_position: 31
 
 サーバーのいろいろな機能を、コマンドを打たずに開けるメニューアイテムです。`/phone`でいつでも受け取れます。
 
-**端末を手に持ってタップ(PCでは右クリック)する**とメニューが開き、カテゴリを選ぶとその中の機能一覧が表示されます。[ミッション](https://docs.ymg24.org/docs/living/commands/mission)・[ミュート](https://docs.ymg24.org/docs/living/commands/mute)・[役職変更](https://docs.ymg24.org/docs/living/commands/role)・[求人掲示板](https://docs.ymg24.org/docs/living/commands/jobboard)など、多くの機能をここから呼び出せます。
+**端末を手に持ってタップ(PCでは右クリック)する**とメニューが開き、カテゴリを選ぶとその中の機能一覧が表示されます。[ミッション](/docs/living/commands/mission)・[ミュート](/docs/living/commands/mute)・[役職変更](/docs/living/commands/role)・[求人掲示板](/docs/living/commands/jobboard)など、多くの機能をここから呼び出せます。
 
 :::tip メニューの形を変えられます
 `/setting`の「よもぎ端末をインベントリ形式のUIで開く」をオンにすると、ボタンの一覧ではなく**チェストのような画面**でメニューが開きます。全部の機能が1画面に並び、どれでも1タップで実行できます。
@@ -27,7 +27,7 @@ sidebar_position: 31
 | 携帯クラフト台 | タップすると、作業台を置かなくてもクラフト画面が開きます |
 | 圧縮の杖 | タップするとメニューが開き、素材(鉄インゴットや小麦など)とブロック(鉄ブロックや俵など)をまとめて行き来させられます |
 | 万能元素 | 傷んだ道具に重ねると、耐久値が全回復します(1つの道具につき使える回数に上限があります) |
-| 自動売却機 | 持っているだけで、設定したアイテムを自動で売ってくれます(→[公式ショップ](https://docs.ymg24.org/docs/living/commands/shop)) |
+| 自動売却機 | 持っているだけで、設定したアイテムを自動で売ってくれます(→[公式ショップ](/docs/living/commands/shop)) |
 
 圧縮の杖は、**名前や説明文が付いていないふつうのアイテムだけ**を変換の対象にします。ガチャの景品などを間違えて変換してしまうことはありません。
 

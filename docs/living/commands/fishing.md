@@ -8,7 +8,7 @@ sidebar_position: 24
 
 ## 釣り方
 
-ふつうの統合版と同じく、釣り竿を使って釣ります。釣れる魚のレアリティは、**竿のFishing Power**・**[釣りレベル](https://docs.ymg24.org/docs/living/commands/levels)**・**使っている餌**によって変わります。
+ふつうの統合版と同じく、釣り竿を使って釣ります。釣れる魚のレアリティは、**竿のFishing Power**・**[釣りレベル](/docs/living/commands/levels)**・**使っている餌**によって変わります。
 
 ## 餌(えさ)について
 

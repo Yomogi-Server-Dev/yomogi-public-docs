@@ -4,7 +4,7 @@ sidebar_position: 35
 
 # 釣果の売却
 
-[釣り](https://docs.ymg24.org/docs/living/commands/fishing)で手に入れた魚などを、まとめて売却できる機能です。
+[釣り](/docs/living/commands/fishing)で手に入れた魚などを、まとめて売却できる機能です。
 
 ## 使い方
 

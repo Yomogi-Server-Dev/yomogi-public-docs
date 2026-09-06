@@ -5,7 +5,7 @@ sidebar_position: 10
 # 有人レジ
 
 有人レジを使うと、店員が商品をその場で登録して、お客さんが看板をタップするだけで支払えるレジを作れます。  
-[チェストショップ](https://docs.ymg24.org/docs/living/commands/chest-shop)と違って手数料がかからないのが利点ですが、設置に1,000YGかかります。
+[チェストショップ](/docs/living/commands/chest-shop)と違って手数料がかからないのが利点ですが、設置に1,000YGかかります。
 
 ## 有人レジの作り方
 

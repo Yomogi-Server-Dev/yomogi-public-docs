@@ -34,7 +34,7 @@ sidebar_position: 15
 - **看板ショップでの購入** — 街なかなどに設置されている称号ショップの看板をタップ(PCでは右クリック)して購入する
 - **アスレチックの報酬**
 - **イベントでの配布**
-- **[ミッション](https://docs.ymg24.org/docs/living/commands/mission)の達成報酬**
+- **[ミッション](/docs/living/commands/mission)の達成報酬**
 
 ## 称号を囲む[ ]の色の意味
 

@@ -49,4 +49,4 @@ sidebar_position: 20
 ## 公認企業制度
 
 社員や取引先を思いやるための「優良企業ガイドライン」を守っている企業は「公認企業」になることができ、運営からさまざまな支援を受けられます。  
-詳しくは[公認企業制度のページ](https://docs.ymg24.org/docs/living/supplement/good-standing-company)をご覧ください。
+詳しくは[公認企業制度のページ](/docs/living/supplement/good-standing-company)をご覧ください。

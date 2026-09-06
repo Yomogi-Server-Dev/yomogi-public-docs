@@ -6,19 +6,19 @@ sidebar_position: 19
 
 いやな気持ちになる相手や、距離を置きたいプレイヤーがいる場合は、ミュート機能を使うことで、そのプレイヤーのチャットなどを表示しないようにできます。
 
-生活サーバー内で`/mute`を実行するか、[よもぎ端末](https://docs.ymg24.org/docs/living/commands/custom-items)から「ミュート」を選ぶと利用できます。
+生活サーバー内で`/mute`を実行するか、[よもぎ端末](/docs/living/commands/custom-items)から「ミュート」を選ぶと利用できます。
 
 ## ミュートの効果
 
 あるプレイヤーをミュートすると、次のようになります。
 
 - ミュートしたプレイヤーの全体チャットが表示されなくなります。ただし、自分のチャットは相手に届きます
-- [近距離チャット](https://docs.ymg24.org/docs/living/commands/limited-vc)はお互いに届かなくなります
+- [近距離チャット](/docs/living/commands/limited-vc)はお互いに届かなくなります
 - ミュートしたプレイヤーの入退出メッセージが表示されなくなります
 - そのほか、ミュートしたプレイヤーに関する一部のシステムメッセージが表示されなくなります
-- お互いに[`/pay`での送金](https://docs.ymg24.org/docs/living/commands/money)ができなくなります
-- お互いに[`/mail`でのメール送受信](https://docs.ymg24.org/docs/living/commands/mail)ができなくなります
-- お互いに[土地保護・土地共有](https://docs.ymg24.org/docs/living/commands/land-protection)ができなくなります
+- お互いに[`/pay`での送金](/docs/living/commands/money)ができなくなります
+- お互いに[`/mail`でのメール送受信](/docs/living/commands/mail)ができなくなります
+- お互いに[土地保護・土地共有](/docs/living/commands/land-protection)ができなくなります
 
 ## コマンド
 

@@ -119,4 +119,4 @@ GoogleChromeの「自動字幕起こし」機能などをご利用ください�
 
 ![ラピスラズリの画像](./img/accessibility_10.png)
 
-なお、定型文は自分の好みの文に設定することもできます。詳しくは[こちらの定型文について解説したページ](https://docs.ymg24.org/docs/wolf/fixed_text )をご覧ください。
+なお、定型文は自分の好みの文に設定することもできます。詳しくは[こちらの定型文について解説したページ](/docs/wolf/supplement/fixed_text)をご覧ください。

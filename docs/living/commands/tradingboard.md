@@ -4,7 +4,7 @@ sidebar_position: 11
 
 # 出店掲示板
 
-自分の[チェストショップ](https://docs.ymg24.org/docs/living/commands/chest-shop)やお店を登録して、他のプレイヤーに座標つきで見つけてもらえる掲示板です。
+自分の[チェストショップ](/docs/living/commands/chest-shop)やお店を登録して、他のプレイヤーに座標つきで見つけてもらえる掲示板です。
 
 ## 使い方
 

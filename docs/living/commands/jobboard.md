@@ -8,7 +8,7 @@ sidebar_position: 21
 
 ## 使い方
 
-`/jobboard`(別名 `/kyujin`、`/jb`)でメインメニューを開きます。[よもぎ端末](https://docs.ymg24.org/docs/living/commands/custom-items)の「求人・仕事依頼」ボタンからも開けます。
+`/jobboard`(別名 `/kyujin`、`/jb`)でメインメニューを開きます。[よもぎ端末](/docs/living/commands/custom-items)の「求人・仕事依頼」ボタンからも開けます。
 
 - **一覧を見る** — 新しい順に投稿が並びます。求人のみ/仕事依頼のみで絞り込むこともできます
 - **投稿する** — 下記の2種類から選んで投稿します
@@ -18,7 +18,7 @@ sidebar_position: 21
 
 | 種別 | 内容 | 必ず書く項目 |
 |---|---|---|
-| 求人 | [会社](https://docs.ymg24.org/docs/living/commands/company)がプレイヤーを募集する投稿 | 人事担当者名・会社名・会社概要 |
+| 求人 | [会社](/docs/living/commands/company)がプレイヤーを募集する投稿 | 人事担当者名・会社名・会社概要 |
 | 仕事依頼 | 護衛・運搬・素材収集・建築などの、1回かぎりの依頼 | 仕事内容・報酬(金額または「応相談」) |
 
 ## 制限

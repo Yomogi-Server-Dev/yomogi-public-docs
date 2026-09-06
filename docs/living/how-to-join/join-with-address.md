@@ -29,7 +29,7 @@ sidebar_position: 1
 
 :::caution 注意
 Nintendo Switchの方は「サーバーを追加」ボタンがありません。  
-サーバーの追加方法については[PC/スマートフォン以外のデバイスからでも参加できますか？](https://docs.ymg24.org/docs/living/faq/device)をご覧ください。
+サーバーの追加方法については[PC/スマートフォン以外のデバイスからでも参加できますか？](/docs/living/faq/device)をご覧ください。
 :::
 
 ![サーバーを追加ボタンの位置を示したスクリーンショット](../img/how_to_join_1.png)
@@ -42,5 +42,5 @@ Nintendo Switchの方は「サーバーを追加」ボタンがありません�
 ⑥ サーバーに参加できます
 
 :::caution 注意
-サーバーに参加できない場合は[Minecraftの生活サーバーに参加できません](https://docs.ymg24.org/docs/living/faq/joining-faults)をご覧ください。
+サーバーに参加できない場合は[Minecraftの生活サーバーに参加できません](/docs/living/faq/joining-faults)をご覧ください。
 :::

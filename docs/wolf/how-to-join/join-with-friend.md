@@ -44,7 +44,7 @@ sidebar_position: 2
 ![よもぎサーバーの選択方法を示したスクリーンショット](./img/how_to_join_friend_4.png)
 
 :::caution 注意
-サーバーに接続できない場合は https://docs.ymg24.org/docs/wolf/faq/joining-faults をご覧いただくか、[サーバーアドレスによる接続](https://docs.ymg24.org/docs/wolf/how-to-join/join-with-address)をご検討ください。
+サーバーに接続できない場合は[こちらのよくある質問のページ](/docs/wolf/faq/joining-faults)をご覧いただくか、[サーバーアドレスによる接続](/docs/wolf/how-to-join/join-with-address)をご検討ください。
 
 :::
 

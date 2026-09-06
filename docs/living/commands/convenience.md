@@ -36,11 +36,11 @@ sidebar_position: 32
 | BGMの音量 | 1〜100で調整 |
 | ローマ字投稿を日本語に変換 | 上記の自動変換機能のオン・オフ |
 | 計算式を有効にする | 上記の簡易電卓機能のオン・オフ |
-| ミッションを動的に追跡する | [ミッション](https://docs.ymg24.org/docs/living/commands/mission)の進み具合を、より細かく表示する |
-| エレベーター降下時にスニーク解除 | [エレベーター](https://docs.ymg24.org/docs/living/commands/elevator)で降りた後、スニーク状態が残らないようにする |
-| 適正役職以外での採掘時に勧告文表示 | [役職](https://docs.ymg24.org/docs/living/commands/role)に合わないブロックを壊したときの案内表示のオン・オフ |
+| ミッションを動的に追跡する | [ミッション](/docs/living/commands/mission)の進み具合を、より細かく表示する |
+| エレベーター降下時にスニーク解除 | [エレベーター](/docs/living/commands/elevator)で降りた後、スニーク状態が残らないようにする |
+| 適正役職以外での採掘時に勧告文表示 | [役職](/docs/living/commands/role)に合わないブロックを壊したときの案内表示のオン・オフ |
 | 画面左上に座標を表示 | 現在地の座標をいつも表示する(既定でオン) |
-| よもぎ端末をインベントリ形式のUIで開く | [よもぎ端末](https://docs.ymg24.org/docs/living/commands/custom-items)のメニューを、ボタン一覧ではなくチェスト風の画面で開く |
+| よもぎ端末をインベントリ形式のUIで開く | [よもぎ端末](/docs/living/commands/custom-items)のメニューを、ボタン一覧ではなくチェスト風の画面で開く |
 
 :::tip 設定画面はゲームの設定からも開けます
 `/setting`のほかに、マインクラフトの「設定」→「サーバー」の欄からも同じ設定画面を開けます。  
@@ -76,4 +76,4 @@ sidebar_position: 32
 | `/sit` | その場に座る | 全員 |
 | `/setting` | 個人設定の画面を開く | 全員 |
 
-[土地保護](https://docs.ymg24.org/docs/living/commands/land-protection)まわりのコマンドだけを探したいときは`/guards`も便利です。
+[土地保護](/docs/living/commands/land-protection)まわりのコマンドだけを探したいときは`/guards`も便利です。

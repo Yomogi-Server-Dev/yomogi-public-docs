@@ -53,4 +53,4 @@ sidebar_position: 9
 
 ## 詳細な仕様
 
-チェストショップの詳細な仕様は、[チェストショップ(補足資料)](https://docs.ymg24.org/docs/living/supplement/chest-shop)で確認できます。
+チェストショップの詳細な仕様は、[チェストショップ(補足資料)](/docs/living/supplement/chest-shop)で確認できます。

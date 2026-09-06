@@ -5,8 +5,8 @@ sidebar_position: 2
 
 はい、参加可能です。
 
-[フレンド追加による参加](https://docs.ymg24.org/docs/living/how-to-join/join-with-friend)の場合は、特殊な操作なしにそのままご参加いただけます。  
-[サーバーアドレスによる参加](https://docs.ymg24.org/docs/living/how-to-join/join-with-address)の場合は、以下の特殊な操作が必要になります。  
+[フレンド追加による参加](/docs/living/how-to-join/join-with-friend)の場合は、特殊な操作なしにそのままご参加いただけます。  
+[サーバーアドレスによる参加](/docs/living/how-to-join/join-with-address)の場合は、以下の特殊な操作が必要になります。  
 
 ### Nintendo Switch
 

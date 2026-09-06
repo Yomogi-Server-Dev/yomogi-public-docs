@@ -3,6 +3,7 @@
     "position": 2,
     "link": {
         "type": "generated-index",
+        "slug": "/living/commands",
         "description": "生活サーバーで利用できる機能について説明します。"
     }
 }

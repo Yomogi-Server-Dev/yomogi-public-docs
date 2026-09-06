@@ -10,7 +10,7 @@ sidebar_position: 18
 ## MinecraftとDiscordの連携
 
 近距離VCに参加するためには、MinecraftのアカウントとDiscordのアカウントを連携(ひもづけ)する必要があります。  
-連携の方法については、[近距離VCに参加できません](https://docs.ymg24.org/docs/living/faq/lvc-faults)のページをご覧ください。  
+連携の方法については、[近距離VCに参加できません](/docs/living/faq/lvc-faults)のページをご覧ください。  
 なお、マイクラ人狼イベントなどに参加された方で、すでに連携をお済ませの方は、ここで改めて連携する必要はありません。
 
 ## Discord認証

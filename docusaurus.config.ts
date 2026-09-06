@@ -111,7 +111,14 @@ const config: Config = {
         [
             '@docusaurus/plugin-client-redirects',
             {
-                redirects: [],
+                redirects: [
+                    // docs/intro.mdは新トップページ(/)の内容と重複したため削除した。
+                    // 旧リンク・検索エンジンのインデックスからのアクセスを新トップページへ逃がす。
+                    {
+                        to: '/',
+                        from: '/docs/intro',
+                    },
+                ],
             },
         ],
         // スマホのホーム画面に追加してアプリのように開けるようにし(PWA化)、

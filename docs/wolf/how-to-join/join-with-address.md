@@ -30,7 +30,7 @@ sidebar_position: 1
 
 :::caution 注意
 Nintendo Switchの方は「サーバーを追加」ボタンがありません。  
-サーバーの追加方法については https://docs.ymg24.org/docs/wolf/faq をご覧ください。
+サーバーの追加方法については[こちらのよくある質問のページ](/docs/wolf/faq)をご覧ください。
 
 :::
 
@@ -44,6 +44,6 @@ Nintendo Switchの方は「サーバーを追加」ボタンがありません�
 ⑥ サーバーに接続できます　　
 
 :::caution 注意
-サーバーに接続できない場合は https://docs.ymg24.org/docs/wolf/faq/joining-faults をご覧ください。
+サーバーに接続できない場合は[こちらのよくある質問のページ](/docs/wolf/faq/joining-faults)をご覧ください。
 
 :::

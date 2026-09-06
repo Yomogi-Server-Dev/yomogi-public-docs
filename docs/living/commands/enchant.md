@@ -21,8 +21,8 @@ sidebar_position: 25
 
 エンチャント本は、主に次の方法で手に入ります。
 
-- 合った[役職](https://docs.ymg24.org/docs/living/commands/role)(木こり・採掘者・農家など)でブロックを壊したときの報酬
-- [ガチャ](https://docs.ymg24.org/docs/living/commands/gacha)のおまけ景品
+- 合った[役職](/docs/living/commands/role)(木こり・採掘者・農家など)でブロックを壊したときの報酬
+- [ガチャ](/docs/living/commands/gacha)のおまけ景品
 
 ## コマンド
 
@@ -31,5 +31,5 @@ sidebar_position: 25
 | `/anvil` | 手に持った道具・防具へエンチャントを合成する | 全員 |
 
 :::info 役職による制限
-`/anvil`の実行に「エンチャンター」の役職が必要になる場合があります。詳しくは[役職制度のページ](https://docs.ymg24.org/docs/living/commands/role)をご覧ください。
+`/anvil`の実行に「エンチャンター」の役職が必要になる場合があります。詳しくは[役職制度のページ](/docs/living/commands/role)をご覧ください。
 :::
