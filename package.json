@@ -34,11 +34,13 @@
         "@docusaurus/module-type-aliases": "^3.10.2",
         "@docusaurus/tsconfig": "^3.10.2",
         "@docusaurus/types": "^3.10.2",
+        "@types/mdast": "^4.0.4",
         "autoprefixer": "^10.4.20",
         "docusaurus-plugin-llms": "^0.6.0",
         "postcss": "^8.4.49",
         "prettier": "~3.3.3",
-        "typescript": "~5.5.2"
+        "typescript": "~5.5.2",
+        "unist-util-visit": "^5.1.0"
     },
     "browserslist": {
         "production": [

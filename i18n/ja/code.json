@@ -1,0 +1,32 @@
+{
+  "theme.SearchBar.label": {
+    "message": "検索"
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "すべての検索結果を見る"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "一致するドキュメントが見つかりませんでした"
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "「{context}」内のすべての検索結果を見る"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "「{context}」以外のすべての検索結果を見る"
+  },
+  "theme.SearchPage.existingResultsTitle": {
+    "message": "「{query}」の検索結果"
+  },
+  "theme.SearchPage.emptyResultsTitle": {
+    "message": "ドキュメントを検索"
+  },
+  "theme.SearchPage.documentsFound.plurals": {
+    "message": "{count} 件のドキュメントが見つかりました"
+  },
+  "theme.SearchPage.noResultsText": {
+    "message": "一致するドキュメントが見つかりませんでした"
+  },
+  "theme.SearchPage.searchContext.everywhere": {
+    "message": "すべて"
+  }
+}

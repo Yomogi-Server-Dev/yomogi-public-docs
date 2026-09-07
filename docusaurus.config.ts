@@ -1,6 +1,7 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import {remarkRoleFactionHeadings, remarkItemCardHeadings} from './src/remark/flatListCardHeadings';
 
 const config: Config = {
     title: 'Yomogi Server Guide',
@@ -67,6 +68,10 @@ const config: Config = {
                     sidebarPath: './sidebars.ts',
                     editUrl:
                         'https://github.com/Yomogi-Server-Dev/yomogi-public-docs/blob/main/',
+                    // 役職一覧(all_roles.md)・特殊アイテム一覧(all_items.md)は同じ書式の
+                    // 見出しが延々と続くため、見出しテキストを解析してカード風の
+                    // アクセントカラーを付与する(該当しないページには何もしない)。
+                    remarkPlugins: [remarkRoleFactionHeadings, remarkItemCardHeadings],
                 },
                 blog: {
                     showReadingTime: true,
@@ -181,6 +186,12 @@ const config: Config = {
                     {
                         to: '/docs/wolf/features/fixed_text',
                         from: '/docs/wolf/supplement/fixed_text',
+                    },
+                    // 役職の識別色は「必須情報ではなく補足情報」との判断で、逆に
+                    // features → supplement へ移動された。
+                    {
+                        to: '/docs/wolf/supplement/role-colors',
+                        from: '/docs/wolf/features/role-colors',
                     },
                 ],
             },

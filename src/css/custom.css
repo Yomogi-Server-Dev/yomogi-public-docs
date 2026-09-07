@@ -257,3 +257,44 @@ h1, h2, h3, .hero__title {
     padding-left: 0.75rem;
     border-left: 3px solid var(--ifm-color-primary);
 }
+
+/* 役職一覧(47件)・特殊アイテム一覧(12件)は、同じ書式の見出しが延々と
+   続く一覧ページ。見出しテキストは remark プラグイン(flatListCardHeadings.ts)
+   で解析してクラスを付与しており、ここでは役職一覧を陣営別のアクセント
+   カラー付きカードにする(色は補助的な手がかりで、陣営名自体は見出し
+   テキストにそのまま残るため色覚に依存しない)。 */
+.markdown h2.role-heading,
+.markdown h2.item-heading {
+    margin-top: 1.5rem;
+    padding: 0.65rem 1rem;
+    border-bottom: none;
+    border-left: 4px solid var(--card-accent, var(--ifm-color-primary));
+    border-radius: 0 var(--ifm-global-radius) var(--ifm-global-radius) 0;
+    background: color-mix(in srgb, var(--card-accent, var(--ifm-color-primary)) 8%, transparent);
+}
+
+.role-heading--citizen {
+    --card-accent: #2f9e44;
+}
+.role-heading--wolf {
+    --card-accent: #e03131;
+}
+.role-heading--third {
+    --card-accent: #9c36b5;
+}
+.role-heading--fourth {
+    --card-accent: #1971c2;
+}
+
+[data-theme='dark'] .role-heading--citizen {
+    --card-accent: #4ade80;
+}
+[data-theme='dark'] .role-heading--wolf {
+    --card-accent: #ff8787;
+}
+[data-theme='dark'] .role-heading--third {
+    --card-accent: #da77f2;
+}
+[data-theme='dark'] .role-heading--fourth {
+    --card-accent: #74c0fc;
+}

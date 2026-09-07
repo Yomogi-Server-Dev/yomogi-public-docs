@@ -55,7 +55,6 @@ export const wolfFeatureCategories: FeatureCategory[] = [
         items: [
             {path: 'wolf/how-to-play/roles', title: '役職(Basic)', icon: Drama},
             {path: 'wolf/features/all_roles', title: '全役職一覧', icon: BookMarked},
-            {path: 'wolf/features/role-colors', title: '役職の識別色', icon: Palette},
             {path: 'wolf/shoot-out', title: '銃撃戦のルール', icon: Crosshair},
         ],
     },
@@ -73,6 +72,7 @@ export const wolfFeatureCategories: FeatureCategory[] = [
         category: '補足・その他',
         icon: Info,
         items: [
+            {path: 'wolf/supplement/role-colors', title: '役職の識別色', icon: Palette},
             {path: 'wolf/supplement/server_scaling', title: 'サーバー分割', icon: Monitor},
             {path: 'wolf/supplement/delete_resource_packs', title: 'リソースパックの削除', icon: Trash2},
             {path: 'wolf/supplement/accessibility', title: 'アクセシビリティ', icon: Accessibility},
