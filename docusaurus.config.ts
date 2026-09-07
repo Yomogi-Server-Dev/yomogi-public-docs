@@ -35,6 +35,11 @@ const config: Config = {
 
     markdown: {
         mermaid: true,
+        // Docusaurus 3.9で onBrokenMarkdownLinks (トップレベル) が非推奨になり、
+        // ここへ移動した。v4での削除に備えて先に移行しておく。
+        hooks: {
+            onBrokenMarkdownLinks: 'warn',
+        },
     },
 
     themes: ['@docusaurus/theme-mermaid'],
@@ -48,7 +53,6 @@ const config: Config = {
     projectName: 'yomogi-public-docs',
 
     onBrokenLinks: 'throw',
-    onBrokenMarkdownLinks: 'warn',
 
     i18n: {
         defaultLocale: 'ja',
