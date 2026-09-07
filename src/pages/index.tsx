@@ -4,6 +4,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
+import {CircleDot, CalendarClock, Map, Swords, Building2} from 'lucide-react';
 import FeatureIndex from '@site/src/components/FeatureIndex';
 import {livingFeatureCategories} from '@site/src/data/livingFeatures';
 import {wolfFeatureCategories} from '@site/src/data/wolfFeatures';
@@ -32,12 +33,14 @@ function HomepageHeader() {
                     <Link
                         className="button button--primary button--lg"
                         to="/docs/living/how-to-join">
-                        🌃 生活サーバーを見る
+                        <Building2 className={styles.buttonIcon} aria-hidden="true" />
+                        生活サーバーを見る
                     </Link>
                     <Link
                         className={clsx('button button--lg', styles.wolfButton)}
                         to="/docs/wolf/how-to-join">
-                        🐺 マイクラ人狼を見る
+                        <Swords className={styles.buttonIcon} aria-hidden="true" />
+                        マイクラ人狼を見る
                     </Link>
                 </div>
                 <div className={styles.statsBar}>
@@ -48,10 +51,12 @@ function HomepageHeader() {
                 </div>
                 <nav className={styles.quickNav} aria-label="ページ内ナビゲーション">
                     <a href="#living-features" className={styles.quickNavLink}>
-                        🗺️ 生活サーバーの機能を見る ↓
+                        <Map className={styles.quickNavIcon} aria-hidden="true" />
+                        生活サーバーの機能を見る ↓
                     </a>
                     <a href="#wolf-features" className={clsx(styles.quickNavLink, styles.quickNavLinkWolf)}>
-                        🐺 人狼の機能を見る ↓
+                        <Swords className={styles.quickNavIcon} aria-hidden="true" />
+                        人狼の機能を見る ↓
                     </a>
                 </nav>
             </div>
@@ -74,7 +79,10 @@ function WolfHighlight() {
             <div className="container">
                 <div className={clsx('card', styles.wolfCard)}>
                     <div className="card__body">
-                        <Heading as="h2">🐺 マイクラ人狼</Heading>
+                        <Heading as="h2" className={styles.wolfCardTitle}>
+                            <Swords className={styles.wolfCardIcon} aria-hidden="true" />
+                            マイクラ人狼
+                        </Heading>
                         <p>
                             毎週土曜日21:30から開催。会議・投票を行いながら、弓や狙撃銃を使ったPvPで
                             相手陣営の全滅を目指します。遊べる役職は驚異の47種類！
@@ -100,16 +108,36 @@ export default function Home(): ReactNode {
             <main>
                 <FeatureIndex
                     id="living-features"
-                    eyebrow="🟢 24時間稼働中"
-                    title="🗺️ 生活サーバーの全機能"
+                    eyebrow={
+                        <>
+                            <CircleDot aria-hidden="true" />
+                            24時間稼働中
+                        </>
+                    }
+                    title={
+                        <>
+                            <Map aria-hidden="true" />
+                            生活サーバーの全機能
+                        </>
+                    }
                     lead="気になる項目をタップすると、詳しい使い方のページに移動します。"
                     categories={livingFeatureCategories}
                 />
                 <WolfHighlight />
                 <FeatureIndex
                     id="wolf-features"
-                    eyebrow="📅 毎週土曜 21:30開催"
-                    title="🐺 マイクラ人狼の全機能"
+                    eyebrow={
+                        <>
+                            <CalendarClock aria-hidden="true" />
+                            毎週土曜 21:30開催
+                        </>
+                    }
+                    title={
+                        <>
+                            <Swords aria-hidden="true" />
+                            マイクラ人狼の全機能
+                        </>
+                    }
                     lead="気になる項目をタップすると、詳しい使い方のページに移動します。"
                     categories={wolfFeatureCategories}
                     accent="var(--wolf-accent)"

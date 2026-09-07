@@ -2,6 +2,7 @@ import React, {type ReactNode} from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
+import {SearchX, Home, Building2, Swords} from 'lucide-react';
 import type {Props} from '@theme/NotFound/Content';
 
 import styles from './styles.module.css';
@@ -22,9 +23,7 @@ export default function NotFoundContent({className}: Props): ReactNode {
     return (
         <main className={clsx('container', styles.main, className)}>
             <div className="container">
-                <p className={styles.emoji} aria-hidden="true">
-                    🌿
-                </p>
+                <SearchX className={styles.icon} aria-hidden="true" />
                 <Heading as="h1" className={styles.title}>
                     ページが見つかりませんでした
                 </Heading>
@@ -35,13 +34,16 @@ export default function NotFoundContent({className}: Props): ReactNode {
                 </p>
                 <div className={styles.buttons}>
                     <Link className="button button--primary button--lg" to="/">
-                        🏠 トップページへ
+                        <Home className={styles.buttonIcon} aria-hidden="true" />
+                        トップページへ
                     </Link>
                     <Link className="button button--outline button--primary button--lg" to="/docs/living/how-to-join">
-                        🌃 生活サーバーを見る
+                        <Building2 className={styles.buttonIcon} aria-hidden="true" />
+                        生活サーバーを見る
                     </Link>
                     <Link className={clsx('button button--lg', styles.wolfButton)} to="/docs/wolf/how-to-join">
-                        🐺 マイクラ人狼を見る
+                        <Swords className={styles.buttonIcon} aria-hidden="true" />
+                        マイクラ人狼を見る
                     </Link>
                 </div>
                 <p className={styles.help}>

@@ -10,7 +10,10 @@
 }
 
 .eyebrow {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.04em;
@@ -18,9 +21,26 @@
     margin-bottom: 0.5rem;
 }
 
+.eyebrow svg {
+    width: 0.95rem;
+    height: 0.95rem;
+    stroke-width: 2.5;
+}
+
 .sectionTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
     text-align: center;
     margin-bottom: 0.5rem;
+}
+
+.sectionTitle svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    stroke-width: 2.25;
+    flex-shrink: 0;
 }
 
 .sectionLead {
@@ -50,12 +70,22 @@
 }
 
 .categoryTitle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     font-size: 1.05rem;
     font-weight: 700;
     color: var(--feature-accent, var(--ifm-color-primary));
     border-left: 4px solid var(--feature-accent, var(--ifm-color-primary));
     padding-left: 0.6rem;
     margin: 0 0 1.1rem;
+}
+
+.categoryIcon {
+    width: 1.15rem;
+    height: 1.15rem;
+    flex-shrink: 0;
+    stroke-width: 2.25;
 }
 
 /* タイルを横並び(アイコン+左寄せ文字)にすることで、縦積みだった時より
@@ -92,10 +122,25 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
 }
 
-.tileEmoji {
-    font-size: 1.5rem;
-    line-height: 1;
+/* アイコンをタイルの色付き円バッジに乗せ、絵文字だった頃より
+   「作り込まれた」印象と視認性の高さを両立させる。ホバー時は
+   カテゴリ/セクションのアクセントカラーに染まる。 */
+.tileIcon {
+    width: 1.15rem;
+    height: 1.15rem;
     flex-shrink: 0;
+    padding: 0.5rem;
+    box-sizing: content-box;
+    border-radius: 999px;
+    color: var(--feature-accent, var(--ifm-color-primary));
+    background: color-mix(in srgb, var(--feature-accent, var(--ifm-color-primary)) 12%, transparent);
+    stroke-width: 2.1;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.tile:hover .tileIcon {
+    color: #fff;
+    background: var(--feature-accent, var(--ifm-color-primary));
 }
 
 .tileTitle {

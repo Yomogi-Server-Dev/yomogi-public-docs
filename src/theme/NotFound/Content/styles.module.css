@@ -31,9 +31,12 @@
     z-index: 1;
 }
 
-.emoji {
-    font-size: 3.5rem;
-    margin-bottom: 0.5rem;
+.icon {
+    width: 4rem;
+    height: 4rem;
+    stroke-width: 1.75;
+    color: var(--ifm-color-primary);
+    margin-bottom: 1rem;
 }
 
 .title {
@@ -54,6 +57,18 @@
     gap: 1rem;
     flex-wrap: wrap;
     margin-bottom: 2rem;
+}
+
+.buttons a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.buttonIcon {
+    width: 1.1rem;
+    height: 1.1rem;
+    stroke-width: 2.25;
 }
 
 .wolfButton {

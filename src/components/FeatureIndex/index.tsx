@@ -7,8 +7,8 @@ import styles from './styles.module.css';
 
 type Props = {
     id: string;
-    eyebrow: string;
-    title: string;
+    eyebrow: ReactNode;
+    title: ReactNode;
     lead: string;
     categories: FeatureCategory[];
     accent?: string;
@@ -22,6 +22,8 @@ type Props = {
  * 各タイルは docs/<item.path> の詳細ページへ直接リンクする。
  * 生活サーバー・マイクラ人狼、どちらのトップページセクションにも共通で使う。
  * accent/mutedで見出し色・背景を切り替え、2つのセクションを見た目でも区別できるようにしている。
+ * アイコンは絵文字ではなくlucide-reactのSVGコンポーネントを使い、線の太さ(stroke)を
+ * 揃えて統一感のある「作り込まれた」印象にしている。
  */
 export default function FeatureIndex({id, eyebrow, title, lead, categories, accent, muted}: Props): ReactNode {
     const accentStyle = accent ? ({'--feature-accent': accent} as CSSProperties) : undefined;
@@ -35,13 +37,14 @@ export default function FeatureIndex({id, eyebrow, title, lead, categories, acce
                 <p className={styles.sectionLead}>{lead}</p>
                 {categories.map((group) => (
                     <div key={group.category} className={styles.categoryBlock}>
-                        <h3 className={styles.categoryTitle}>{group.category}</h3>
+                        <h3 className={styles.categoryTitle}>
+                            <group.icon className={styles.categoryIcon} aria-hidden="true" />
+                            {group.category}
+                        </h3>
                         <div className={styles.grid}>
                             {group.items.map((item) => (
                                 <Link key={item.path} to={`/docs/${item.path}`} className={styles.tile}>
-                                    <span className={styles.tileEmoji} aria-hidden="true">
-                                        {item.emoji}
-                                    </span>
+                                    <item.icon className={styles.tileIcon} aria-hidden="true" />
                                     <span className={styles.tileTitle}>{item.title}</span>
                                 </Link>
                             ))}
