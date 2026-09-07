@@ -144,13 +144,19 @@ h1, h2, h3, .hero__title {
     border-radius: 6px;
 }
 
-/* ナビゲーションバーに半透明+ぼかしを付け、スクロール後にコンテンツが
-   下に透けて見える"すりガラス"の質感を出す(Vercel/Stripe等のドキュメント
-   サイトでよく使われる) */
+/* ナビゲーションバーに半透明の質感を付け、スクロール後にコンテンツが
+   下に透けて見えるようにする。
+   注意: 以前はbackdrop-filterで"すりガラス"効果も付けていたが、CSSの
+   仕様上backdrop-filterを持つ要素はその子孫のposition:fixed要素の
+   基準(containing block)になってしまう。DocusaurusのモバイルサイドバーはDOM上
+   .navbarの内側にレンダリングされるため、スマートフォンでハンバーガー
+   メニューを開いた際にメニューパネル全体が画面全体ではなく.navbarの
+   高さに押しつぶされて表示される不具合が発生していた
+   (2026-09-07 鯖民からのご報告により発覚)。
+   この不具合を確実に解消するため、backdrop-filterは使わず半透明の
+   背景色のみに留める。 */
 .navbar {
     background-color: color-mix(in srgb, var(--ifm-navbar-background-color) 90%, transparent);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
 }
 
 /* ブログ一覧: 既定は記事ごとに<hr>で区切るだけの素朴なリストだったため、
