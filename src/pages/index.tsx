@@ -85,7 +85,7 @@ function WolfHighlight() {
                         </Heading>
                         <p>
                             毎週土曜日21:30から開催。会議・投票を行いながら、弓や狙撃銃を使ったPvPで
-                            相手陣営の全滅を目指します。遊べる役職は驚異の47種類！
+                            相手陣営の全滅を目指します。遊べる役職は驚異の41種類！
                             初めての参加でも安心のサポート体制です。
                         </p>
                         <Link className={clsx('button', styles.wolfButton)} to="/docs/wolf/how-to-join">
