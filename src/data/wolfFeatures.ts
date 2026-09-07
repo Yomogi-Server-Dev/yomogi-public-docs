@@ -28,6 +28,7 @@ export const wolfFeatureCategories: FeatureCategory[] = [
         items: [
             {path: 'wolf/how-to-play/roles', title: '役職(Basic)', emoji: '🎭'},
             {path: 'wolf/features/all_roles', title: '全役職一覧', emoji: '📖'},
+            {path: 'wolf/features/role-colors', title: '役職の識別色', emoji: '🎨'},
             {path: 'wolf/shoot-out', title: '銃撃戦のルール', emoji: '🔫'},
         ],
     },
