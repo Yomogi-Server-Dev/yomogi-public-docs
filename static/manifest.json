@@ -1,7 +1,7 @@
 {
     "name": "Yomogi Server Guide",
     "short_name": "よもぎサーバー",
-    "description": "よもぎサーバー(YOMOGI Server) 公式ガイド。生活・経済サーバーとマイクラ人狼イベントの遊び方をご案内します。",
+    "description": "よもぎサーバー(YOMOGI Server) 公式ガイド。生活・経済サーバーとマイクラ人狼の遊び方をご案内します。",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#ffffff",

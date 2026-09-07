@@ -26,7 +26,7 @@ function HomepageHeader() {
                 <p className="hero__subtitle">{siteConfig.tagline}</p>
                 <p className={styles.heroDescription}>
                     Minecraft統合版で遊べる「生活・経済サーバー」と、毎週土曜21:30開催の
-                    「マイクラ人狼イベント」。2つのサービスを無料で提供しています。
+                    「マイクラ人狼」。2つのサービスを無料で提供しています。
                 </p>
                 <div className={styles.buttons}>
                     <Link
@@ -74,7 +74,7 @@ function WolfHighlight() {
             <div className="container">
                 <div className={clsx('card', styles.wolfCard)}>
                     <div className="card__body">
-                        <Heading as="h2">🐺 マイクラ人狼イベント</Heading>
+                        <Heading as="h2">🐺 マイクラ人狼</Heading>
                         <p>
                             毎週土曜日21:30から開催。会議・投票を行いながら、弓や狙撃銃を使ったPvPで
                             相手陣営の全滅を目指します。遊べる役職は驚異の47種類！
@@ -95,7 +95,7 @@ export default function Home(): ReactNode {
     return (
         <Layout
             title={siteConfig.title}
-            description="よもぎサーバー(YOMOGI Server) 公式ガイド。生活・経済サーバーとマイクラ人狼イベントの遊び方をご案内します。">
+            description="よもぎサーバー(YOMOGI Server) 公式ガイド。生活・経済サーバーとマイクラ人狼の遊び方をご案内します。">
             <HomepageHeader />
             <main>
                 <FeatureIndex
