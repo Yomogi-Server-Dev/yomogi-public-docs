@@ -45,6 +45,15 @@ mydeacy:
   image_url: https://github.com/MyDeacy.png
   page: true
   socials:
-    mydeacy.net: https://mydeacy.ne
+    mydeacy.net: https://mydeacy.net
     twitter: MyDeacy
-    
+
+bass:
+  name: Bass
+  title: Bass
+  url: https://x.com/Bass1573393
+  image_url: https://pbs.twimg.com/profile_images/2095695305253765120/vIBsQFn9_400x400.jpg
+  page: true
+  socials:
+    x: Bass1573393
+
