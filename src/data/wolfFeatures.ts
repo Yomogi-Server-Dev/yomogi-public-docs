@@ -32,7 +32,7 @@ export const wolfFeatureCategories: FeatureCategory[] = [
         ],
     },
     {
-        category: '利用可能な機能',
+        category: '機能一覧',
         items: [
             {path: 'wolf/features/commands', title: '便利なコマンド', emoji: '⌨️'},
             {path: 'wolf/features/setting', title: '個人設定', emoji: '⚙️'},
