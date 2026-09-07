@@ -29,6 +29,13 @@ function HomepageHeader() {
                     Minecraft統合版で遊べる「生活・経済サーバー」と、毎週土曜21:30開催の
                     「マイクラ人狼」。2つのサービスを無料で提供しています。
                 </p>
+                <p className={styles.heroNote}>
+                    サーバーの雰囲気をまず知りたい方は
+                    <a href="https://www.ymg24.org/" target="_blank" rel="noopener noreferrer">
+                        公式ホームページ
+                    </a>
+                    へ。ここ(サーバーガイド)では、生活サーバー・マイクラ人狼の詳しい使い方をまとめています。
+                </p>
                 <div className={styles.buttons}>
                     <Link
                         className="button button--primary button--lg"

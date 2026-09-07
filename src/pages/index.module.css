@@ -47,6 +47,22 @@
     color: var(--ifm-color-emphasis-800);
 }
 
+/* ホームページ(ymg24.org、外部・初心者向けの概要サイト)とこのサーバー
+   ガイド(詳しい情報の置き場所)の役割の違いが伝わるよう、控えめな注釈
+   として案内を添える。本文より小さく・薄い色にして、hero本来の主役
+   (タイトル・CTA)を邪魔しないようにする。 */
+.heroNote {
+    max-width: 560px;
+    margin: -1.5rem auto 2rem;
+    font-size: 0.85rem;
+    color: var(--ifm-color-emphasis-600);
+}
+
+.heroNote a {
+    margin: 0 0.2rem;
+    font-weight: 600;
+}
+
 .buttons {
     display: flex;
     align-items: center;

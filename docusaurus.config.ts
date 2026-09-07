@@ -312,6 +312,10 @@ const config: Config = {
                     title: 'More',
                     items: [
                         {
+                            label: '公式ホームページ',
+                            href: 'https://www.ymg24.org/',
+                        },
+                        {
                             label: '公開ドキュメント (GitHub)',
                             href: 'https://github.com/Yomogi-Server-Dev/yomogi-public-docs',
                         },
