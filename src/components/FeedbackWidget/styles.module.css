@@ -1,0 +1,46 @@
+.wrapper {
+    margin-top: 2rem;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid var(--ifm-color-emphasis-200);
+    border-radius: var(--ifm-card-border-radius);
+    background: var(--ifm-color-emphasis-100);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.question {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.voteButton {
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    background: var(--ifm-background-surface-color);
+    color: var(--ifm-font-color-base);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.voteButton:hover {
+    transform: translateY(-2px);
+    border-color: var(--ifm-color-primary);
+}
+
+.thanks {
+    margin: 0;
+    font-weight: 600;
+    color: var(--ifm-color-primary);
+}

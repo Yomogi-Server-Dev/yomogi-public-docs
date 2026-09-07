@@ -139,6 +139,15 @@ const config: Config = {
                 ],
             },
         ],
+        // どのページがよく読まれているか、フィードバックボタンの反応と合わせて
+        // 「分かりにくいページ」を把握するために導入する。
+        [
+            '@docusaurus/plugin-google-gtag',
+            {
+                trackingID: 'G-GZXY5NYJFF',
+                anonymizeIP: true,
+            },
+        ],
     ],
 
     themeConfig: {
