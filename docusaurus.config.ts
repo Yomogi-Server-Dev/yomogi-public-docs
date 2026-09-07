@@ -315,10 +315,6 @@ const config: Config = {
                             label: '公開ドキュメント (GitHub)',
                             href: 'https://github.com/Yomogi-Server-Dev/yomogi-public-docs',
                         },
-                        {
-                            label: '運営向けサーバー運用ガイド',
-                            href: 'https://github.com/Yomogi-Server-Dev/server-management-guide',
-                        },
                     ],
                 },
             ],
