@@ -98,8 +98,13 @@ h1, h2, h3, .hero__title {
 }
 
 /* 表: Infimaの既定(縞模様・ヘッダー網掛け)に角丸とホバー行を足し、
-   カード的な見た目に揃える */
+   カード的な見た目に揃える。列数の多い表(コマンド一覧・スキル表等)は
+   スマートフォンの幅では収まりきらないことがあるため、表だけを横スクロール
+   させてページ全体がはみ出さないようにする(GitHub Markdown等でも使われる
+   定番の対応)。 */
 .markdown table {
+    display: block;
+    overflow-x: auto;
     border-radius: var(--ifm-card-border-radius);
 }
 

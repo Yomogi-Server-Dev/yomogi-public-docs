@@ -206,16 +206,16 @@ const config: Config = {
                     type: 'docSidebar',
                     sidebarId: 'livingSidebar',
                     position: 'left',
-                    label: '生活サーバー',
+                    label: '🌃 生活サーバー',
                 },
                 {
                     type: 'docSidebar',
                     sidebarId: 'wolfSidebar',
                     position: 'left',
-                    label: 'マイクラ人狼',
+                    label: '🐺 マイクラ人狼',
                 },
-                {to: '/blog', label: 'Blog', position: 'left'},
-                {to: '/docs/inquiry', label: 'お問い合わせ', position: 'right'},
+                {to: '/blog', label: '📝 Blog', position: 'left'},
+                {to: '/docs/inquiry', label: '💬 お問い合わせ', position: 'right'},
                 {
                     href: 'https://github.com/Yomogi-Server-Dev/yomogi-public-docs',
                     label: 'GitHub',
@@ -229,20 +229,20 @@ const config: Config = {
                 {
                     title: 'ガイド',
                     items: [
-                        {label: '生活サーバー', to: '/docs/living/how-to-join'},
-                        {label: 'マイクラ人狼', to: '/docs/wolf/how-to-join'},
-                        {label: '利用規約', to: '/docs/tos/terms-of-use'},
+                        {label: '🌃 生活サーバー', to: '/docs/living/how-to-join'},
+                        {label: '🐺 マイクラ人狼', to: '/docs/wolf/how-to-join'},
+                        {label: '📋 利用規約', to: '/docs/tos/terms-of-use'},
                     ],
                 },
                 {
                     title: 'Community',
                     items: [
                         {
-                            label: 'Discord',
+                            label: '💬 Discord',
                             href: 'https://discord.gg/twstSJnfyY',
                         },
                         {
-                            label: 'お問い合わせ',
+                            label: '✉️ お問い合わせ',
                             to: '/docs/inquiry',
                         },
                     ],
@@ -251,11 +251,11 @@ const config: Config = {
                     title: 'More',
                     items: [
                         {
-                            label: '公開ドキュメント (GitHub)',
+                            label: '🐙 公開ドキュメント (GitHub)',
                             href: 'https://github.com/Yomogi-Server-Dev/yomogi-public-docs',
                         },
                         {
-                            label: '運営向けサーバー運用ガイド',
+                            label: '📘 運営向けサーバー運用ガイド',
                             href: 'https://github.com/Yomogi-Server-Dev/server-management-guide',
                         },
                     ],
