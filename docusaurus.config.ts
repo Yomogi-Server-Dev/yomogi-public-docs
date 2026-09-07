@@ -17,6 +17,22 @@ const config: Config = {
         },
     ],
 
+    // Google Fontsの読み込み前にDNS解決・TLSハンドシェイクを済ませておき、
+    // 初回表示までの体感速度を上げる(フォント自体の重さは変えないが、
+    // 取得開始までのラグを縮められる定番の最適化)。fonts.gstatic.comは
+    // 実際のフォントファイルが置かれているドメインで、フォント取得は
+    // クレデンシャル無しのCORSリクエストになるためcrossoriginが必須。
+    headTags: [
+        {
+            tagName: 'link',
+            attributes: {rel: 'preconnect', href: 'https://fonts.googleapis.com'},
+        },
+        {
+            tagName: 'link',
+            attributes: {rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous'},
+        },
+    ],
+
     markdown: {
         mermaid: true,
     },
@@ -65,7 +81,6 @@ const config: Config = {
                 theme: {
                     customCss: [
                         './src/css/custom.css',
-                        './src/css/tailwind.css',
                     ]
                 },
             } satisfies Preset.Options,
@@ -73,11 +88,15 @@ const config: Config = {
     ],
 
     plugins: [
-        async function tailwindcss() {
+        // 実際にはtailwindのクラスを一切使っていなかった(src/components配下を
+        // 確認しても tw- 系のクラスは無い)ため、tailwindcss自体の適用は取りやめた
+        // (未使用のCSSリセット分だけ配信バイト数が減る)。ただしautoprefixer
+        // (ベンダープレフィックス自動付与)は他のCSSプロパティで引き続き
+        // 必要なため、こちらだけ残す。
+        async function postcssAutoprefixer() {
             return {
-                name: 'docusaurus-tailwindcss',
+                name: 'docusaurus-postcss-autoprefixer',
                 configurePostCss(postcssOptions) {
-                    postcssOptions.plugins.push(require('tailwindcss'));
                     postcssOptions.plugins.push(require('autoprefixer'));
                     return postcssOptions;
                 },
