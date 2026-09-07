@@ -37,3 +37,8 @@ programming:
   label: Programing
   permalink: /programming
   description: プログラミング関係
+
+welcome:
+  label: Welcome
+  permalink: /welcome
+  description: 初めての方向けのお知らせ

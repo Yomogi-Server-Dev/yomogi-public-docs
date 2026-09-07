@@ -57,8 +57,9 @@
 }
 
 .wolfButton {
-    border-color: var(--wolf-accent);
+    border: 2px solid var(--wolf-accent);
     color: var(--wolf-accent) !important;
+    background: transparent;
 }
 
 .wolfButton:hover {
