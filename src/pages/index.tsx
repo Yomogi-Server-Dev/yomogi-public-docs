@@ -43,7 +43,7 @@ function HomepageHeader() {
                 <div className={styles.statsBar}>
                     <StatPill number="無料" label="参加費" />
                     <StatPill number="275種" label="釣れる魚" />
-                    <StatPill number="41種" label="人狼の役職" />
+                    <StatPill number="47種" label="人狼の役職" />
                     <StatPill number="24h" label="生活サーバー稼働" />
                 </div>
                 <nav className={styles.quickNav} aria-label="ページ内ナビゲーション">
@@ -77,7 +77,7 @@ function WolfHighlight() {
                         <Heading as="h2">🐺 マイクラ人狼イベント</Heading>
                         <p>
                             毎週土曜日21:30から開催。会議・投票を行いながら、弓や狙撃銃を使ったPvPで
-                            相手陣営の全滅を目指します。遊べる役職は驚異の41種類！
+                            相手陣営の全滅を目指します。遊べる役職は驚異の47種類！
                             初めての参加でも安心のサポート体制です。
                         </p>
                         <Link className={clsx('button', styles.wolfButton)} to="/docs/wolf/how-to-join">
