@@ -27,18 +27,23 @@ export const wolfFeatureCategories: FeatureCategory[] = [
         category: '役職',
         items: [
             {path: 'wolf/how-to-play/roles', title: '役職(Basic)', emoji: '🎭'},
-            {path: 'wolf/supplement/all_roles', title: '全役職一覧', emoji: '📖'},
-            {path: 'wolf/supplement/all_items', title: '特殊アイテム一覧', emoji: '🎒'},
+            {path: 'wolf/features/all_roles', title: '全役職一覧', emoji: '📖'},
             {path: 'wolf/shoot-out', title: '銃撃戦のルール', emoji: '🔫'},
         ],
     },
     {
-        category: '便利機能・その他',
+        category: '利用可能な機能',
         items: [
-            {path: 'wolf/supplement/commands', title: '便利なコマンド', emoji: '⌨️'},
-            {path: 'wolf/supplement/setting', title: '個人設定', emoji: '⚙️'},
+            {path: 'wolf/features/commands', title: '便利なコマンド', emoji: '⌨️'},
+            {path: 'wolf/features/setting', title: '個人設定', emoji: '⚙️'},
+            {path: 'wolf/features/all_items', title: '特殊アイテム一覧', emoji: '🎒'},
+            {path: 'wolf/features/fixed_text', title: '定型文', emoji: '💬'},
+        ],
+    },
+    {
+        category: '補足・その他',
+        items: [
             {path: 'wolf/supplement/server_scaling', title: 'サーバー分割', emoji: '🖥️'},
-            {path: 'wolf/supplement/fixed_text', title: '定型文', emoji: '💬'},
             {path: 'wolf/supplement/delete_resource_packs', title: 'リソースパックの削除', emoji: '🗑️'},
             {path: 'wolf/supplement/accessibility', title: 'アクセシビリティ', emoji: '♿'},
         ],

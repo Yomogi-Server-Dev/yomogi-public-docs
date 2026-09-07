@@ -118,6 +118,33 @@ const config: Config = {
                         to: '/',
                         from: '/docs/intro',
                     },
+                    // 銃撃戦のルールをwolf/supplement配下から独立カテゴリ(wolf/shoot-out)へ昇格。
+                    {
+                        to: '/docs/wolf/shoot-out',
+                        from: '/docs/wolf/supplement/shoot_out',
+                    },
+                    // 役職一覧・特殊アイテム一覧・便利なコマンド・個人設定・定型文を
+                    // wolf/supplement配下から新設のwolf/features(利用可能な機能)へ移動。
+                    {
+                        to: '/docs/wolf/features/all_roles',
+                        from: '/docs/wolf/supplement/all_roles',
+                    },
+                    {
+                        to: '/docs/wolf/features/all_items',
+                        from: '/docs/wolf/supplement/all_items',
+                    },
+                    {
+                        to: '/docs/wolf/features/commands',
+                        from: '/docs/wolf/supplement/commands',
+                    },
+                    {
+                        to: '/docs/wolf/features/setting',
+                        from: '/docs/wolf/supplement/setting',
+                    },
+                    {
+                        to: '/docs/wolf/features/fixed_text',
+                        from: '/docs/wolf/supplement/fixed_text',
+                    },
                 ],
             },
         ],

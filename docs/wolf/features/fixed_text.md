@@ -1,5 +1,5 @@
 ---
-sidebar_position: 11
+sidebar_position: 5
 ---
 # 定型文
 マイクラ人狼のゲーム中に配られるラピスラズリ、及び定型文について説明します
