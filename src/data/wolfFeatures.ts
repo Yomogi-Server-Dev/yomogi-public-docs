@@ -28,11 +28,15 @@ export const wolfFeatureCategories: FeatureCategory[] = [
         items: [
             {path: 'wolf/how-to-play/roles', title: '役職(Basic)', emoji: '🎭'},
             {path: 'wolf/supplement/all_roles', title: '全役職一覧', emoji: '📖'},
+            {path: 'wolf/supplement/all_items', title: '特殊アイテム一覧', emoji: '🎒'},
+            {path: 'wolf/supplement/shoot_out', title: '銃撃戦モード', emoji: '🔫'},
         ],
     },
     {
         category: '便利機能・その他',
         items: [
+            {path: 'wolf/supplement/commands', title: '便利なコマンド', emoji: '⌨️'},
+            {path: 'wolf/supplement/setting', title: '個人設定', emoji: '⚙️'},
             {path: 'wolf/supplement/server_scaling', title: 'サーバー分割', emoji: '🖥️'},
             {path: 'wolf/supplement/fixed_text', title: '定型文', emoji: '💬'},
             {path: 'wolf/supplement/delete_resource_packs', title: 'リソースパックの削除', emoji: '🗑️'},
