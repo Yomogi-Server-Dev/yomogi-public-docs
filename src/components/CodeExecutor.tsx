@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Check, Copy} from 'lucide-react';
 import {ExecLanguage} from './execLanguage';
+import styles from './CodeExecutor.module.css';
 
 interface CodeExecutorProps {
     initialCode: string;
@@ -83,60 +84,42 @@ const CodeExecutor = ({initialCode, execLanguage, file_name, version}: CodeExecu
     };
 
     return (
-        <div className="my-4 space-y-4">
-            <div className="relative rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900">
-                <div className="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-gray-700">
-                    <span className="text-sm text-gray-600 dark:text-gray-400">
-                        {execLanguage}
-                    </span>
-                    <button
-                        onClick={handleCopy}
-                        className="p-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 rounded-lg transition-colors"
-                        title="コードをコピー"
-                    >
-                        {isCopied ? (
-                            <Check className="w-4 h-4" />
-                        ) : (
-                            <Copy className="w-4 h-4" />
-                        )}
+        <div className={styles.wrapper}>
+            <div className={styles.editorCard}>
+                <div className={styles.editorHeader}>
+                    <span className={styles.langLabel}>{execLanguage}</span>
+                    <button onClick={handleCopy} className={styles.copyButton} title="コードをコピー">
+                        {isCopied ? <Check className={styles.icon} /> : <Copy className={styles.icon} />}
                     </button>
                 </div>
                 <textarea
                     value={code}
                     onKeyDown={handleKeyDown}
                     onChange={(e) => setCode(e.target.value)}
-                    className="w-full h-48 p-4 font-mono text-sm bg-gray-50 dark:bg-gray-900 resize-y"
+                    className={styles.textarea}
                     spellCheck="false"
                 />
             </div>
 
-            <div className="flex items-center space-x-4">
-                <button
-                    onClick={executeCode}
-                    disabled={isLoading}
-                    className="px-4 py-2 bg-emerald-500 dark:bg-emerald-900 text-white rounded hover:bg-emerald-700 hover:dark:bg-emerald-700 disabled:opacity-50 transition-colors"
-                >
+            <div className={styles.actions}>
+                <button onClick={executeCode} disabled={isLoading} className={styles.runButton}>
                     {isLoading ? '実行中...' : 'コードを実行'}
                 </button>
             </div>
 
             {(output || error) && (
-                <div className="p-4 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
+                <div className={styles.resultBox}>
                     {output && (
-                        <div className="space-y-2">
-                            <h4 className="text-lg font-semibold dark:text-gray-100">実行結果:</h4>
-                            <pre className="whitespace-pre-wrap text-sm dark:text-gray-300 font-mono">
-                                {output}
-                            </pre>
+                        <div>
+                            <h4 className={styles.resultHeading}>実行結果:</h4>
+                            <pre className={styles.resultPre}>{output}</pre>
                         </div>
                     )}
 
                     {error && (
-                        <div className="space-y-2">
-                            <h4 className="text-lg font-semibold text-red-700 dark:text-red-400">エラー:</h4>
-                            <pre className="text-sm text-red-600 dark:text-red-400 font-mono">
-                                {error}
-                            </pre>
+                        <div>
+                            <h4 className={styles.errorHeading}>エラー:</h4>
+                            <pre className={styles.errorPre}>{error}</pre>
                         </div>
                     )}
                 </div>
