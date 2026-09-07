@@ -128,6 +128,20 @@ const config: Config = {
             'docusaurus-plugin-image-zoom',
             {},
         ],
+        // PNG/JPGをレスポンシブ化・遅延読み込み・ぼかしプレースホルダー付きで配信する。
+        // 注意: 通常のMarkdown画像記法(![]())には自動適用されず、対象にしたい画像だけ
+        // `@theme/IdealImage`の<Image img={require('./x.png')} />へ個別に置き換える必要がある。
+        // まずは新規画像から順次適用していく想定でプラグインのみ先に導入する。
+        [
+            '@docusaurus/plugin-ideal-image',
+            {
+                quality: 85,
+                max: 1030,
+                min: 640,
+                steps: 4,
+                disableInDev: true,
+            },
+        ],
         // ページを移動・改名した際に、旧URLから新URLへ自動でリダイレクトする。
         // 過去のwolf_recategorize(faq/how-to-joinの分割)を確認したところ、現時点で
         // 実際に壊れているURLは無かったが、今後また構成を変える際の保険として先に導入しておく。
@@ -196,6 +210,19 @@ const config: Config = {
             {
                 trackingID: 'G-GZXY5NYJFF',
                 anonymizeIP: true,
+            },
+        ],
+        // ビルド時に/llms.txt(索引)と/llms-full.txt(全文結合)を生成する。
+        // このサーバーガイドは元々「誰でも見れる」公開情報のみで構成されているため、
+        // AIアシスタント等のクローラーが正しく内容を参照できるよう機械可読な形でも配信する。
+        [
+            'docusaurus-plugin-llms',
+            {
+                title: 'Yomogi Server Guide',
+                description: 'よもぎサーバー 公式ガイド・攻略Wiki(生活サーバー・マイクラ人狼)',
+                includeBlog: true,
+                generateLLMsTxt: true,
+                generateLLMsFullTxt: true,
             },
         ],
     ],
