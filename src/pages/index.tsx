@@ -46,7 +46,7 @@ function HomepageHeader() {
                 <div className={styles.statsBar}>
                     <StatPill number="無料" label="参加費" />
                     <StatPill number="275種" label="釣れる魚" />
-                    <StatPill number="47種" label="人狼の役職" />
+                    <StatPill number="41種" label="人狼の役職" />
                     <StatPill number="24h" label="生活サーバー稼働" />
                 </div>
                 <nav className={styles.quickNav} aria-label="ページ内ナビゲーション">
