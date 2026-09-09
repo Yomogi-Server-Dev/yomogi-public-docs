@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+description: YOMOGI Serverのマインクラフトサーバー利用にあたっての用語の定義・禁止事項などを定めた規約です。
 ---
 
 # Minecraft規約
