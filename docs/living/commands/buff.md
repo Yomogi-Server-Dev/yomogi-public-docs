@@ -2,11 +2,13 @@
 sidebar_position: 30
 ---
 
+import Image from '@theme/IdealImage';
+
 # エフェクトのレンタル
 
 鯖内で`/buff`を実行すると、スピード上昇などのエフェクト(効果)を有料でレンタルできます。
 
-![エフェクトのレンタル画面](./img/buff2.png)
+<Image img={require('./img/buff2.png')} alt="エフェクトのレンタル画面" />
 
 ## エフェクトの種類と値段
 

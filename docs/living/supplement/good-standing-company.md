@@ -2,6 +2,8 @@
 sidebar_position: 3
 ---
 
+import Image from '@theme/IdealImage';
+
 # 公認企業制度
 
 よもぎサーバーでは、[会社プラグイン](/docs/living/commands/company)を使用して設立された会社のうち、特にステークホルダー(社員や取引先といった、その会社に関わる人たち)への配慮と持続的な成長を重要視している会社を「優良企業」とし、申請のあった優良企業に支援金や宣伝支援を行う制度(公認企業制度)を設けています。  
@@ -61,7 +63,7 @@ sidebar_position: 3
 :::tip
 労働条件通知書の例です。
 
-![労働条件通知書の例](./img/agreement_ex.png)
+<Image img={require('./img/agreement_ex.png')} alt="労働条件通知書の例" />
 :::
 
 :::tip

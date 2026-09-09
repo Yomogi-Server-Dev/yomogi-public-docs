@@ -2,12 +2,14 @@
 sidebar_position: 15
 ---
 
+import Image from '@theme/IdealImage';
+
 # 称号プラグイン
 
 称号プラグインを使用すると、名前の前やチャット上に自分だけの「称号」を表示できます。一度取得した称号は履歴に残り、以後は無料で付け替えられます。
 
-![チャットに称号が表示されている様子](./img/rank1.png)
-![プレイヤーの名前の前に称号が表示されている様子](./img/rank2.png)
+<Image img={require('./img/rank1.png')} alt="チャットに称号が表示されている様子" />
+<Image img={require('./img/rank2.png')} alt="プレイヤーの名前の前に称号が表示されている様子" />
 
 ## コマンド
 
@@ -48,4 +50,4 @@ sidebar_position: 15
 | 紫色 | イベント |
 | 黄緑 | ミッション取得 |
 
-![入手方法ごとの称号の色の違い](./img/rank4.png)
+<Image img={require('./img/rank4.png')} alt="入手方法ごとの称号の色の違い" />

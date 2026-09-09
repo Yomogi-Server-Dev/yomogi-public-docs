@@ -2,6 +2,8 @@
 sidebar_position: 26
 ---
 
+import Image from '@theme/IdealImage';
+
 # ガチャ
 
 ゲーム内でガチャを引いて、さまざまなアイテムを獲得できる機能です。
@@ -26,7 +28,7 @@ sidebar_position: 26
 `/gacha`(別名 `/gatya`)でガチャのフォームを開き、「ガチャを引く」を選んでから引きたいガチャを選びます。  
 何回引くか(1〜250回)をフォームに入力して「送信」ボタンを押すと、まとめて引くことができます。
 
-![ガチャのメニュー画面](./img/gacha1.png)
+<Image img={require('./img/gacha1.png')} alt="ガチャのメニュー画面" />
 
 ## ガチャチケットの交換レート
 
@@ -45,7 +47,7 @@ sidebar_position: 26
 サーバー全体の統計と、自分の統計を確認できます。  
 統計画面では、ガチャを引いた回数・これまでに出たアイテムの数・出る確率が表示されます。
 
-![ガチャの統計画面](./img/gacha2.png)
+<Image img={require('./img/gacha2.png')} alt="ガチャの統計画面" />
 
 ## 図鑑
 
