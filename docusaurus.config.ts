@@ -13,7 +13,11 @@ const config: Config = {
     // "作り込まれた"印象が出にくかったため導入した。
     stylesheets: [
         {
-            href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap',
+            // 実際にCSS側で使っている太さは400(本文)・600・700(見出し等)・900(トップページの数字)のみ
+            // (500はどこからも参照されていなかった)。読み込むウェイトを実使用分だけに絞り、
+            // フォント配信バイト数を削減しつつ、600指定箇所が最寄りのウェイトへ丸められる
+            // (ブラウザ依存で太さが揺れる)問題も合わせて解消する。
+            href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;900&display=swap',
             type: 'text/css',
         },
     ],
