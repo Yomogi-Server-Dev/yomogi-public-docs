@@ -2,6 +2,8 @@
 sidebar_position: 1
 ---
 
+import Image from '@theme/IdealImage';
+
 # サーバーアドレスを入力してサーバーに接続する
 
 サーバーアドレスを入力することによるマイクラ人狼用サーバーの接続方法について説明します。  
@@ -34,11 +36,11 @@ Nintendo Switchの方は「サーバーを追加」ボタンがありません�
 
 :::
 
-![サーバーを追加ボタンの位置を示したスクリーンショット](./img/how_to_join_address_1.png)
+<Image img={require('./img/how_to_join_address_1.png')} alt="サーバーを追加ボタンの位置を示したスクリーンショット" />
 
 ④ サーバー名に好きなサーバー名を、サーバーアドレスに「ymgs.f5.si」、ポートに「19132」と入力してください。  
 
-![サーバー追加欄に入力すべき項目が書かれたスクリーンショット](./img/how_to_join_address_2.png)
+<Image img={require('./img/how_to_join_address_2.png')} alt="サーバー追加欄に入力すべき項目が書かれたスクリーンショット" />
 
 ⑤ 「追加してプレイ」をクリックします  
 ⑥ サーバーに接続できます　　

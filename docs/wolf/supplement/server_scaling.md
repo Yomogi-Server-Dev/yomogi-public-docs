@@ -2,6 +2,8 @@
 sidebar_position: 6
 ---
 
+import Image from '@theme/IdealImage';
+
 # サーバー分割
 
 マイクラ人狼ではサーバーの参加人数が多い際、全く同じ機能を持ったサーバーを複数台稼働させ、ゲームを並列で行います。  
@@ -21,10 +23,10 @@ sidebar_position: 6
 
 サーバーIDは様々なところで確認することができます。  
 
-![マインクラフトサーバー内の画面左上にサーバーIDが書かれている事を示す画像](./img/server_scaling_1.png)
-![サーバーアドレスにサーバーIDが含まれていることを示す画像。ただし、第一サーバーのみ例外的にymgs.f5.siです](./img/server_scaling_2.png)
-![VCチャンネル名にサーバーIDが含まれていることを示す画像。ただし、第一サーバーのみ例外的にマイクラ人狼VCです](./img/server_scaling_3.png)
-![連携コマンドにサーバーIDが含まれていることを示す画像](./img/server_scaling_4.png)
+<Image img={require('./img/server_scaling_1.png')} alt="マインクラフトサーバー内の画面左上にサーバーIDが書かれている事を示す画像" />
+<Image img={require('./img/server_scaling_2.png')} alt="サーバーアドレスにサーバーIDが含まれていることを示す画像。ただし、第一サーバーのみ例外的にymgs.f5.siです" />
+<Image img={require('./img/server_scaling_3.png')} alt="VCチャンネル名にサーバーIDが含まれていることを示す画像。ただし、第一サーバーのみ例外的にマイクラ人狼VCです" />
+<Image img={require('./img/server_scaling_4.png')} alt="連携コマンドにサーバーIDが含まれていることを示す画像" />
 
 人狼サーバーは全てのサーバーの機能が全く同じであるため、例えば第2サーバーが稼働しているときは第2サーバーを使用して連携操作を行うこともできます。  
 ただし、最も安定して稼働しているサーバーは第1サーバーであるため、原則として連携操作には第1サーバーを使用することを推奨しています。

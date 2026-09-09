@@ -2,6 +2,8 @@
 sidebar_position: 6
 ---
 
+import Image from '@theme/IdealImage';
+
 # 会議
 
 マイクラ人狼内での会議について説明します
@@ -59,14 +61,14 @@ sidebar_position: 6
 一部の役職では、能力を誰に向かって使用したかも併せてCOできます。
 また、会議時間内であれば、COをやり直すこともできます。
 
-![how_to_co](./img/co_1.png)
+<Image img={require('./img/co_1.png')} alt="COカードを使ってCOする様子" />
 
 ### プレイヤーのCOの一覧が画面左下に表示されます
 
 誰がどの役職をCOしたかの一覧が、ゲーム画面の左下に表示されます。表示はCOカードを使ってCOをした場合のみ行われ、口頭(vcやチャット)でCOした場合は表示されません。
 基本的には、COは会議外でも引き続き表示されます。ただし、会議外にCOを変更することはできません。
 
-![how_to_co](./img/co_2.png)
+<Image img={require('./img/co_2.png')} alt="画面左下に表示されるCO一覧" />
 
 ### 投票時間の延長・短縮を提案できます
 
