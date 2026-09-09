@@ -2,6 +2,8 @@
 sidebar_position: 23
 ---
 
+import Image from '@theme/IdealImage';
+
 # オークション
 
 [土地保護](/docs/living/commands/land-protection)が外れた土地(1か月以上ログインが無かった放置土地など)は、運営によってオークション(いちばん高い金額を出した人が買える競り)にかけられることがあります。誰でも入札(買いたい金額を出すこと)に参加できます。
@@ -9,6 +11,8 @@ sidebar_position: 23
 ## 使い方
 
 `/auction`でオークションの一覧・入札メニューを開きます。開催中のオークションを選ぶと、今の最高額を確認して入札できます。
+
+<Image img={require('./img/auction_menu.png')} alt="オークション管理のメニュー画面" />
 
 ## 入札のルール
 

@@ -2,6 +2,8 @@
 sidebar_position: 24
 ---
 
+import Image from '@theme/IdealImage';
+
 # 釣り
 
 このサーバーの釣りは、ふつうの統合版の釣りに「Fishing Power(釣り竿の性能)」「釣りレベル」「レアリティ(珍しさ)」「餌」「図鑑」といった要素を加えたものです。バニラ(ふつうのマインクラフト)には無い魚もたくさん釣れます。
@@ -19,6 +21,9 @@ sidebar_position: 24
 ## 釣りメニュー
 
 `/fishing`で釣りメニュー(図鑑・これまでの釣果一覧など)を開きます。図鑑は、集めた種類が50%・100%に達すると報酬がもらえます。
+
+<Image img={require('./img/fishing_dex.png')} alt="釣り図鑑のコンプリート率画面" />
+<Image img={require('./img/fishing_dex_search.png')} alt="釣り図鑑を名前で検索したときの一覧画面" />
 
 ## 釣った魚を売る
 

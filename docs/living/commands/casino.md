@@ -2,9 +2,13 @@
 sidebar_position: 27
 ---
 
+import Image from '@theme/IdealImage';
+
 # カジノ
 
 生活ワールドには、看板をタップ(PCでは右クリック)して遊べるスロットマシンが設置されています。
+
+<Image img={require('./img/casino_slot.png')} alt="スロット看板と確定報酬の表示" />
 
 ## 遊び方
 
@@ -33,6 +37,8 @@ sidebar_position: 27
 | コマンド | 説明 | 権限 |
 |---|---|---|
 | `/casino` | 配当表・自分の成績(通算/本日)・プレイ履歴・稼ぎランキング・設置されているスロット一覧を確認する | 全員 |
+
+<Image img={require('./img/casino_menu.png')} alt="/casinoのメニュー画面" />
 
 :::caution 注意
 新しいスロットの設置は運営のみが行えます。

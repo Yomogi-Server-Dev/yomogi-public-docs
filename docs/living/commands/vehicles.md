@@ -2,6 +2,8 @@
 sidebar_position: 28
 ---
 
+import Image from '@theme/IdealImage';
+
 # 車(乗り物)
 
 生活ワールドには、乗って運転できる車両(車・バイクなど)が用意されています。車はショップでYGを払って購入でき、自分のものとして鍵をかけたり、性能を強化したりできます。
@@ -9,6 +11,8 @@ sidebar_position: 28
 ## 車を手に入れる
 
 `/vehicles2 shop`でショップを開き、YGを払って車を購入します。買った車はその場に出てきて、**購入した時点であなたの所有物**になります。
+
+<Image img={require('./img/vehicles_shop.png')} alt="乗り物ショップの購入画面" />
 
 所有している車は`/vehicles2 mycars`で一覧・管理できます。どこに置いたか分からなくなったときは`/vehicles2 find`で距離と方角が分かります。
 
@@ -20,6 +24,8 @@ sidebar_position: 28
 - **クラクション** — `/vehicles2 horn`
 - **今の状態を見る** — `/vehicles2 status`(燃料・所有者・強化の段階が分かります)
 - 小さな段差は、前に進むだけで自動で乗り越えます
+
+<Image img={require('./img/vehicles_status.png')} alt="/vehicles2 statusの表示例" />
 
 ## 燃料と給油
 

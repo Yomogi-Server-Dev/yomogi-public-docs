@@ -2,6 +2,8 @@
 sidebar_position: 11
 ---
 
+import Image from '@theme/IdealImage';
+
 # 出店掲示板
 
 自分の[チェストショップ](/docs/living/commands/chest-shop)やお店を登録して、他のプレイヤーに座標つきで見つけてもらえる掲示板です。
@@ -10,11 +12,15 @@ sidebar_position: 11
 
 `/tradingboard`で掲示板を開きます。
 
+<Image img={require('./img/tradingboard_top.png')} alt="出店掲示板のメインメニュー" />
+
 - **出店する** — 今いる場所をお店として登録します(1人あたり最大5件まで)
 - **出店を検索** — キーワードやタグで探します
 - **クイック絞り込み** — タグ(ブロック/食料品/ツールなど)で一覧を絞り込みます
 - **いいねランキング** — いいねが多いお店の一覧を表示します
 - 各お店の詳細画面から、いいねやコメントの投稿・閲覧、道案内(近くの土地番号の表示)ができます
+
+<Image img={require('./img/tradingboard_list.png')} alt="出店掲示板の一覧画面" />
 
 ## コマンド
 

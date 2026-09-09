@@ -2,6 +2,8 @@
 sidebar_position: 32
 ---
 
+import Image from '@theme/IdealImage';
+
 # 便利な機能
 
 コマンドを覚えなくてもすぐ使える、生活を便利にする小さな機能をまとめて紹介します。
@@ -41,6 +43,8 @@ sidebar_position: 32
 | 適正役職以外での採掘時に勧告文表示 | [役職](/docs/living/commands/role)に合わないブロックを壊したときの案内表示のオン・オフ |
 | 画面左上に座標を表示 | 現在地の座標をいつも表示する(既定でオン) |
 | よもぎ端末をインベントリ形式のUIで開く | [よもぎ端末](/docs/living/commands/custom-items)のメニューを、ボタン一覧ではなくチェスト風の画面で開く |
+
+<Image img={require('./img/convenience_settings.png')} alt="/settingの個人設定画面" />
 
 :::tip 設定画面はゲームの設定からも開けます
 `/setting`のほかに、マインクラフトの「設定」→「サーバー」の欄からも同じ設定画面を開けます。  
