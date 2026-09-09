@@ -2,6 +2,8 @@
 sidebar_position: 31
 ---
 
+import Image from '@theme/IdealImage';
+
 # よもぎ端末とオリジナルアイテム
 
 よもぎサーバーには、バニラ(ふつうのマインクラフト)には無いオリジナルのアイテムやブロックがたくさんあります。ここでは代表的なものを紹介します。
@@ -16,9 +18,14 @@ sidebar_position: 31
 
 **端末を手に持ってタップ(PCでは右クリック)する**とメニューが開き、カテゴリを選ぶとその中の機能一覧が表示されます。[ミッション](/docs/living/commands/mission)・[ミュート](/docs/living/commands/mute)・[役職変更](/docs/living/commands/role)・[求人掲示板](/docs/living/commands/jobboard)など、多くの機能をここから呼び出せます。
 
+<Image img={require('./img/phone_menu_category.png')} alt="よもぎ端末のカテゴリ選択画面" />
+<Image img={require('./img/phone_menu_function.png')} alt="よもぎ端末の機能一覧画面" />
+
 :::tip メニューの形を変えられます
 `/setting`の「よもぎ端末をインベントリ形式のUIで開く」をオンにすると、ボタンの一覧ではなく**チェストのような画面**でメニューが開きます。全部の機能が1画面に並び、どれでも1タップで実行できます。
 :::
+
+<Image img={require('./img/phone_menu_grid.png')} alt="よもぎ端末のインベントリ形式(チェスト風)UI" />
 
 ## 便利な道具
 

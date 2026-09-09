@@ -2,6 +2,8 @@
 sidebar_position: 21
 ---
 
+import Image from '@theme/IdealImage';
+
 # 求人・仕事依頼
 
 プレイヤーが自由に「求人」や「仕事依頼」を投稿できる掲示板です。
@@ -9,6 +11,8 @@ sidebar_position: 21
 ## 使い方
 
 `/jobboard`(別名 `/kyujin`、`/jb`)でメインメニューを開きます。[よもぎ端末](/docs/living/commands/custom-items)の「求人・仕事依頼」ボタンからも開けます。
+
+<Image img={require('./img/jobboard_top.png')} alt="求人・仕事依頼フォーラムのメインメニュー" />
 
 - **一覧を見る** — 新しい順に投稿が並びます。求人のみ/仕事依頼のみで絞り込むこともできます
 - **投稿する** — 下記の2種類から選んで投稿します
