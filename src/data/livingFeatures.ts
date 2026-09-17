@@ -44,6 +44,7 @@ import {
     Wrench,
     Backpack,
     Compass,
+    ChefHat,
 } from 'lucide-react';
 import type {FeatureCategory} from './featureIndexTypes';
 
@@ -116,6 +117,7 @@ export const livingFeatureCategories: FeatureCategory[] = [
             {path: 'living/commands/buff', title: 'エフェクトのレンタル', icon: FlaskConical},
             {path: 'living/commands/exp-speed-boots', title: '経験値で動くバフ防具', icon: Footprints},
             {path: 'living/commands/athletic', title: 'アスレチック', icon: Dumbbell},
+            {path: 'living/commands/cooking', title: '料理', icon: ChefHat},
         ],
     },
     {
