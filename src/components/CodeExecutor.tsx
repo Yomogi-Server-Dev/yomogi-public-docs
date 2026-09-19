@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, type KeyboardEvent} from 'react';
 import {Check, Copy} from 'lucide-react';
 import {ExecLanguage} from './execLanguage';
 import styles from './CodeExecutor.module.css';
@@ -10,11 +10,24 @@ interface CodeExecutorProps {
     version?: string;
 }
 
+// ブログ記事内で、紹介したコードをその場で書き換えて実行できる埋め込みエディタ
+// (Piston: https://github.com/engineer-man/piston の公開APIをそのまま叩く)。
+// 専用のバックエンドは持たないため、実行結果・エラーはAPIレスポンスの形を
+// そのまま表示に反映する。
+type PistonExecuteResponse = {
+    run?: {output?: string; stdout?: string};
+    message?: string;
+};
+
+function errorMessage(err: unknown): string {
+    return err instanceof Error ? err.message : String(err);
+}
+
 const CodeExecutor = ({initialCode, execLanguage, file_name, version}: CodeExecutorProps) => {
     const [code, setCode] = useState(initialCode);
     const [output, setOutput] = useState('');
     const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState(null);
+    const [error, setError] = useState<string | null>(null);
     const [isCopied, setIsCopied] = useState(false);
 
     const executeCode = async () => {
@@ -39,36 +52,36 @@ const CodeExecutor = ({initialCode, execLanguage, file_name, version}: CodeExecu
                 }),
             });
 
+            const data: PistonExecuteResponse = await response.json();
+
             if (!response.ok) {
-                const errorData = await response.json();
-                throw new Error(errorData.message || `HTTP error! status: ${response.status}`);
+                throw new Error(data.message || `HTTP error! status: ${response.status}`);
             }
 
-            const data = await response.json();
-
             if (data.run) {
-                setOutput(data.run.output || data.run.stdout);
+                setOutput(data.run.output || data.run.stdout || '');
             } else if (data.message) {
                 setError(data.message);
             } else {
                 setError('予期せぬエラーが発生しました');
             }
         } catch (err) {
-            setError('実行中にエラーが発生しました: ' + err.message);
+            setError('実行中にエラーが発生しました: ' + errorMessage(err));
         } finally {
             setIsLoading(false);
         }
     };
 
-    const handleKeyDown = (e) => {
+    const handleKeyDown = (e: KeyboardEvent<HTMLTextAreaElement>) => {
         if (e.key === 'Tab') {
             e.preventDefault();
-            const start = e.target.selectionStart;
-            const end = e.target.selectionEnd;
+            const target = e.currentTarget;
+            const start = target.selectionStart;
+            const end = target.selectionEnd;
             const newCode = code.substring(0, start) + '    ' + code.substring(end);
             setCode(newCode);
             setTimeout(() => {
-                e.target.selectionStart = e.target.selectionEnd = start + 4;
+                target.selectionStart = target.selectionEnd = start + 4;
             }, 0);
         }
     };

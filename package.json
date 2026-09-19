@@ -61,6 +61,8 @@
         "docusaurus-plugin-llms": {
             "minimatch": "^10.2.6",
             "yaml": "^2.9.0"
-        }
+        },
+        "qs": "^6.16.0",
+        "image-size": "^2.0.4"
     }
 }
