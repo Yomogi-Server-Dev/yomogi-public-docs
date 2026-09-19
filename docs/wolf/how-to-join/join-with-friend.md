@@ -29,21 +29,21 @@ import Image from '@theme/IdealImage';
 ➀ Minecraftの統合版を起動し、「プレイ」をクリックします  
 ② 画面右上の「ソーシャル」をクリックします  
 
-<Image img={require('./img/how_to_join_friend_1.png')} alt="ソーシャルボタンの位置を示したスクリーンショット" />
+<Image img={require('../../_shared/join-with-friend/how_to_join_friend_1.png')} alt="ソーシャルボタンの位置を示したスクリーンショット" />
 
 ③ 「人物検索」をクリックします  
 
-<Image img={require('./img/how_to_join_friend_2.png')} alt="人物検索の位置を示したスクリーンショット" />
+<Image img={require('../../_shared/join-with-friend/how_to_join_friend_2.png')} alt="人物検索の位置を示したスクリーンショット" />
 
 ④ 入力欄に「ymg24mc」と入力します  
 ⑤ 検索結果右側の「追加」をクリックします  
 
-<Image img={require('./img/how_to_join_friend_3.png')} alt="ymg24mcの検索方法を示したスクリーンショット" />
+<Image img={require('../../_shared/join-with-friend/how_to_join_friend_3.png')} alt="ymg24mcの検索方法を示したスクリーンショット" />
 
 ⑥ Minecraftを再起動し、2分ほど待機します  
 ⑦ ワールド一覧に表示されている「よもぎサーバー」を選択します　　
 
-<Image img={require('./img/how_to_join_friend_4.png')} alt="よもぎサーバーの選択方法を示したスクリーンショット" />
+<Image img={require('../../_shared/join-with-friend/how_to_join_friend_4.png')} alt="よもぎサーバーの選択方法を示したスクリーンショット" />
 
 :::caution 注意
 サーバーに接続できない場合は[こちらのよくある質問のページ](/docs/wolf/faq/joining-faults)をご覧いただくか、[サーバーアドレスによる接続](/docs/wolf/how-to-join/join-with-address)をご検討ください。

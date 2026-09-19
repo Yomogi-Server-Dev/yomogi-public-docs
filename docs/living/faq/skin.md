@@ -12,28 +12,28 @@ import Image from '@theme/IdealImage';
 
 ① 「設定」項目を選択します
 
-<Image img={require('./img/skin_1.png')} alt="「設定」項目の位置を示したスクリーンショット" />
+<Image img={require('../../_shared/faq-skin/skin_1.png')} alt="「設定」項目の位置を示したスクリーンショット" />
 
 ② 「一般」項目を選択します
 
-<Image img={require('./img/skin_2.png')} alt="「一般」項目の位置を示したスクリーンショット" />
+<Image img={require('../../_shared/faq-skin/skin_2.png')} alt="「一般」項目の位置を示したスクリーンショット" />
 
 ③ 「信頼できるスキンのみ許可」項目をオフにします
 
-<Image img={require('./img/skin_3.png')} alt="「信頼できるスキンのみ許可」項目の位置を示したスクリーンショット" />
+<Image img={require('../../_shared/faq-skin/skin_3.png')} alt="「信頼できるスキンのみ許可」項目の位置を示したスクリーンショット" />
 
 ### ② 自分のスキンが正常に表示されない場合
 
 ① 「更衣室」項目を選択します
 
-<Image img={require('./img/skin_4.png')} alt="「更衣室」項目の位置を示したスクリーンショット" />
+<Image img={require('../../_shared/faq-skin/skin_4.png')} alt="「更衣室」項目の位置を示したスクリーンショット" />
 
 ② 「クラシックスキン」項目を選択します
 
-<Image img={require('./img/skin_5.png')} alt="「クラシックスキン」項目の位置を示したスクリーンショット" />
+<Image img={require('../../_shared/faq-skin/skin_5.png')} alt="「クラシックスキン」項目の位置を示したスクリーンショット" />
 
 ③ 「所持スキン」項目を選択します
 
-<Image img={require('./img/skin_6.png')} alt="「所持スキン」項目の位置を示したスクリーンショット" />
+<Image img={require('../../_shared/faq-skin/skin_6.png')} alt="「所持スキン」項目の位置を示したスクリーンショット" />
 
 ④ 「新たなスキン」項目を選択し、スキンのインポート(読み込み)を行ってください
